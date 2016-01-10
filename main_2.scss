@@ -1,0 +1,336 @@
+//Colors
+//$gold: #C5B358;
+$gold: #cbaf00;
+$gray: darken(#a5a384,30);
+$white: #fff;
+$black: #343434;
+$avatar:$gray;
+$logo:$black;
+
+$tablet-width: 400px;
+$desktop-width: 1024px;
+
+@mixin tablet {
+  // @media (min-width: #{$tablet-width}) and (max-width: #{$desktop-width - 1px}) {
+  @media (min-width: #{$tablet-width}) {
+    @content;
+  }
+}
+
+/*
+@mixin desktop {
+  @media (min-width: #{$desktop-width}) {
+    @content;
+  }
+}*/
+
+@mixin sketch($y, $delay) {
+  opacity: 0;
+  // animation:
+  transform: translateY($y);
+  animation: fadein 0.15s ease-in forwards, retranslate 0.15s linear forwards;
+
+  &:nth-child(n) {
+    animation-delay: $delay;
+  }
+
+  &:nth-child(odd) {
+    animation-delay: $delay + 0.2s;
+  }
+
+  &:nth-child(3n) {
+    animation-delay: $delay + 0.4s;
+  }
+
+  &:nth-child(3n+2) {
+    animation-delay: $delay + 0.6s;
+  }
+}
+
+@keyframes retranslate {
+  to {
+    transform: translate(0, 0);
+  }
+}
+
+@keyframes dash {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes fadein {
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideleft {
+  to {
+    left: 0;
+  }
+}
+
+// Paul Irish Box-Model
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+// Custom Style
+body {
+  margin: 0;
+  padding: 0;
+
+  font-family: Lato, sans-serif;
+  font-weight: 100;
+  color: $white;
+  font-size: 1.5em;
+
+  h1 {
+    font-weight: 100;
+  }
+
+  a {
+    text-decoration: none;
+    color: $gold;
+  }
+
+  .buffer {
+    height: 20vh;
+  }
+
+  @include tablet {
+    font-size: 1.5em;
+  }
+}
+
+header {
+  height: 100vh;
+  display: flex;
+
+  div.left {
+
+    flex: 1 0;
+    height: 100%;
+    background-color: $gold;
+    padding: 250px 0;
+
+    //margin: 20px 0;
+    //padding: 20px;
+    //position: absolute;
+    //background-image: linear-gradient(rgba(255,255,255,0.7),rgba(255,255,255,0.7));
+
+    //border-left: 8px $gold solid;
+
+    svg.logo {
+      max-height:220px;
+      width:100%;
+      height: 100%;
+      fill:$logo;
+    }
+
+    div.titles {
+      display: none;
+      padding: 0 20px;
+      margin-bottom: 20px;
+
+      h1 {
+        margin: 0;
+        color: $white;
+      }
+
+      p {
+        margin:0;
+        font-size: 0.9em;
+      }
+
+      .job {
+        font-size: 1.4em;
+        font-weight:300;
+      }
+    }
+
+    nav {
+      display: none;
+      //display: flex;
+      flex-flow: row nowrap;
+
+      ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+
+        li {
+          padding: 0 20px;
+          font-size: 1.3em;
+
+          &:hover {
+            background-color: $white;
+
+            a {
+              color: $gold;
+            }
+          }
+
+
+          &:not(.icon) + .icon {
+            margin-top: 20px;
+          }
+
+          &.icon {
+            font-size: 1.5em;
+            a {
+              padding-right: 80%;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  div.right {
+
+    flex: 1 0;
+    height: 100%;
+    padding: 120px 0;
+
+    svg {
+      margin: 0 auto;
+      display: block;
+      width:100%;
+      height: 100%;
+      fill: $avatar;
+
+      .st1 {
+        filter: url(#Adobe_OpacityMaskFilter);
+      }
+      .st3 {
+        mask: url(#SVGID_1_);
+      }
+      .st4 {
+        filter: url(#Adobe_OpacityMaskFilter_1_);
+      }
+      .st5 {
+        mask: url(#SVGID_2_);
+      }
+
+      .st0 {
+        fill: none;
+        stroke: $avatar;
+        stroke-linecap: round;
+        stroke-width: 1;
+        stroke-dasharray: 150;
+        stroke-dashoffset: 150;
+        animation: dash 1.8s linear forwards;
+      }
+      .pupil {
+        opacity: 0;
+        animation: fadein 0.6s ease-in 0.5s forwards;
+      }
+      .eyebrows path {
+        @include sketch(4px, 1.6s);
+      }
+      .beard path {
+        @include sketch(-7px, 2.2s);
+      }
+      .hair path {
+        @include sketch(-5px, 2.6s);
+      }
+      .beardtop path {
+        @include sketch(-4px, 2.8s);
+      }
+      .moustach path {
+        @include sketch(-4px, 3.2s);
+      }
+    }
+  }
+
+}
+
+
+
+
+
+
+
+section {
+  height: 100vh;
+  padding: 0 15vw;
+
+  h1 {
+    border: 1px $gold solid;
+    padding: 0.3em;
+  }
+
+  .wrapper {
+    border-top: 8px $gold solid;
+  }
+
+  &#whoiam .wrapper, &#whatido .wrapper {
+    overflow: auto;
+    display: flex;
+    flex-flow: row nowrap;
+    height: 100%;
+    align-items: center;
+
+    h1 {
+      text-align: center;
+      flex-shrink: 0;
+    }
+
+    p {
+      padding: 0 1em;
+      font-size: 1.3em;
+    }
+  }
+
+  &#projects {
+    
+    h1 {
+      display: inline-block;
+    }
+
+    ul {
+      margin: 0;
+      padding: 0;
+    }
+
+    ul.rows {
+      list-style-type: square;
+
+      h2 {
+        margin:0 0 0.5em 0;
+        font-size: 1.4em;
+        font-weight:300;
+        color: $gray;
+      }
+
+      img {
+        width: 50%;
+        float: right;
+        margin: 0 0 0.5em 1em;
+        border: 2px rgba(165, 163, 132, 0.3) solid;
+      }
+
+      & > li {
+        background-color: rgba(165, 163, 132, 0.07);
+        margin: 20px 0;
+        padding: 10px;
+      }
+
+      ul.desc {
+        list-style: none;
+
+        li {
+          border : none;
+          background-color: none;
+        }
+      }
+    }
+  }
+}
+
