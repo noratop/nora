@@ -17,21 +17,31 @@ $(function() {
     $Nb = $("#Nb");
     $Ta = $("#Ta");
     $Tb = $("#Tb");
+    $logo = $("#logo");
+    $logo_wrapper = $('.logo-wrapper');
+    $titles = $(".titles");
 
-    $('div.left').on('mouseenter',function(){
+    $('nav').on('mouseenter',function(){
         $Na.velocity("stop",true).velocity({translateX : -132.5},{delay:0, duration:300});
         $Nb.velocity("stop",true).velocity({translateY : -230},{delay:300, duration:300});
         $Ta.velocity("stop",true).velocity({translateY : -230},{delay:500, duration:300});
         $Tb.velocity("stop",true).velocity({translateX : 225},{delay:0, duration:400}).velocity({translateX : 105},{delay:400, duration:300});
+        $logo_wrapper.velocity({ height: '30vh', paddingTop: '5vh', paddingBottom: 0 }, { delay: 500, duration: 1500 });
+        //$titles.velocity({height:"100%"},{delay:0, duration:500});
     });
 
-    $('div.left').on('mouseleave',function(){
-        $Na.velocity("stop",true).velocity({translateX:-200},{delay:350, duration:300}).velocity({translateX:0},{delay:0, duration:300});
-        $Nb.velocity("stop",true).velocity({translateY:0},{delay:0, duration:230});
-        $Ta.velocity("stop",true).velocity({translateY:0},{delay:300, duration:300});
-        $Tb.velocity("stop",true).velocity({translateX : -140},{delay:0, duration:400}).velocity({translateX : 0},{delay:200, duration:300});
+    $('nav').on('mouseleave',function(){
+        //$logo_wrapper.velocity("stop",true).velocity({paddingLeft:0,paddingRight:0},{delay:0, duration:200});
+        $Na.velocity("stop",true).velocity({translateX:- 150},{delay:800, duration:200}).velocity({translateX:0},{delay:100, duration:400});
+        $Nb.velocity("stop",true).velocity({translateY:0},{delay:300, duration:230});
+        $Ta.velocity("stop",true).velocity({translateY:0},{delay:600, duration:300});
+        $Tb.velocity("stop",true).velocity({translateX : -150},{delay:400, duration:400}).velocity({translateX : 0},{delay:200, duration:300});
     });
 
+
+    $logo.on('click',function(e){
+        $('header').velocity("scroll", { duration: 1200, easing: "ease-in-out" });
+    })
 
     $eyes = $(".eyes");
     $eyes.css('transform-origin','50% 50%');
@@ -42,6 +52,8 @@ $(function() {
         //$Ta.velocity("stop",true).velocity({translateY : -230},{delay:500, duration:300});
         //$Tb.velocity("stop",true).velocity({translateX : 225},{delay:0, duration:400}).velocity({translateX : 105},{delay:400, duration:300});
     });
+
+
 
 
     //$.Velocity.mock = 5;

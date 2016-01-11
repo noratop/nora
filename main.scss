@@ -1,6 +1,11 @@
 //Colors
-$gold: #C5B358;
-$gray: #a5a384;
+//$gold: #C5B358;
+$gold: #cbaf00;
+$gray: darken(#a5a384,30);
+$white: #fff;
+$black: #343434;
+$avatar:$gray;
+$logo:$gray;
 
 $tablet-width: 400px;
 $desktop-width: 1024px;
@@ -78,11 +83,10 @@ html {
 // Custom Style
 body {
   margin: 0;
-  padding: 0;
-
+  padding: 0 0 0 50vw;
   font-family: Lato, sans-serif;
   font-weight: 100;
-  color: $gold;
+  color: $black;
   font-size: 1.5em;
 
   h1 {
@@ -91,11 +95,7 @@ body {
 
   a {
     text-decoration: none;
-    color: $gold;
-  }
-
-  .buffer {
-    height: 20vh;
+    color: $white;
   }
 
   @include tablet {
@@ -103,124 +103,96 @@ body {
   }
 }
 
-header {
+nav {
+  position: fixed;
+  left:0;
   height: 100vh;
-  padding: 2vh 0;
+  width:50vw;
+  background-color: $gold;
 
-  
-  div.face-wrapper {
+  div.logo-wrapper {
+    height: 100vh;
+    padding: 30vh 0;
 
-    height: 100%;
-
-    svg {
-      margin: 0 auto;
+    svg#logo {
       display: block;
-      width:100%;
+      width: 100%;
       height: 100%;
-      fill: $gold;
+      fill: $logo;
+    }
 
-      .st1 {
-        filter: url(#Adobe_OpacityMaskFilter);
-      }
-      .st3 {
-        mask: url(#SVGID_1_);
-      }
-      .st4 {
-        filter: url(#Adobe_OpacityMaskFilter_1_);
-      }
-      .st5 {
-        mask: url(#SVGID_2_);
-      }
-
-      .st0 {
-        fill: none;
-        stroke: $gold;
-        stroke-linecap: round;
-        stroke-width: 1;
-        stroke-dasharray: 150;
-        stroke-dashoffset: 150;
-        animation: dash 1.8s linear forwards;
-      }
-      .pupil {
-        opacity: 0;
-        animation: fadein 0.6s ease-in 0.5s forwards;
-      }
-      .eyebrows path {
-        @include sketch(4px, 1.6s);
-      }
-      .beard path {
-        @include sketch(-7px, 2.2s);
-      }
-      .hair path {
-        @include sketch(-5px, 2.6s);
-      }
-      .beardtop path {
-        @include sketch(-4px, 2.8s);
-      }
-      .moustach path {
-        @include sketch(-4px, 3.2s);
-      }
+    &:hover {
+      cursor: pointer;
     }
   }
 
-  div.menu {
-    margin: 20px 0;
-    padding: 20px 0;
-    position: absolute;
-    background-image: linear-gradient(rgba(255,255,255,0.7),rgba(255,255,255,0.7));
-    border-left: 8px $gold solid;
+  div.titles {
+    text-align: center;
+    color: $white;
 
-    div.title-wrapper {
-      padding: 0 20px;
-      margin-bottom: 20px;
-
-      h1 {
-        margin: 0;
-        color: $gray;
-      }
-
-      p {
-        margin:0;
-        font-size: 0.9em;
-      }
-
-      .job {
-        font-size: 1.4em;
-        font-weight:300;
-      }
+    h1 {
+      margin: 0;
+      color: $white;
     }
 
-    nav {
-      display: flex;
-      flex-flow: row nowrap;
+    p {
+      margin:0;
+      font-size: 0.9em;
+    }
 
-      ul {
-        list-style: none;
-        margin: 0;
-        padding: 0;
+    .job {
+      font-size: 1.4em;
+      font-weight:300;
+    }
+  }
 
-        li {
-          padding: 0 20px;
-          font-size: 1.3em;
+  div.links {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
 
-          &:hover {
-            background-color: $gold;
+    text-align: center;
+    
+    ul {
+      list-style: none;
+      margin: 20px 0 0 0;
+      padding: 0;
 
-            a {
-              color: white;
-            }
+      li {
+        padding: 2px 20px;
+        font-size: 1.3em;
+
+        &.info {
+          //padding-left: 70%;
+          font-size: 1.1em;
+        }
+
+        &:hover {
+          background-color: $white;
+
+          a {
+            color: $gold;
           }
+        }
 
 
-          &:not(.links) + .links {
-            margin-top: 20px;
-          }
+        &:not(.icon) + .icon {
+          margin-top: 20px;
+        }
 
-          &.links {
-            font-size: 1.5em;
-            a {
-              padding-right: 80%;
-            }
+        &.icon {
+          display: inline-flex;
+          //display: flex;
+          //flex-flow: row nowrap;
+          align-items: center;
+          //justify-content: center;
+          //width: 2em;
+          //height:2em;
+          font-size: 1.5em;
+
+          a {
+
+            //padding-right: 80%;
           }
         }
       }
@@ -228,9 +200,66 @@ header {
   }
 }
 
+header {
+
+  flex: 1 0;
+  height: 100vh;
+  padding: 120px 0;
+
+  svg.avatar {
+    margin: 0 auto;
+    display: block;
+    width:100%;
+    height: 100%;
+    fill: $avatar;
+
+    .st1 {
+      filter: url(#Adobe_OpacityMaskFilter);
+    }
+    .st3 {
+      mask: url(#SVGID_1_);
+    }
+    .st4 {
+      filter: url(#Adobe_OpacityMaskFilter_1_);
+    }
+    .st5 {
+      mask: url(#SVGID_2_);
+    }
+
+    .st0 {
+      fill: none;
+      stroke: $avatar;
+      stroke-linecap: round;
+      stroke-width: 1;
+      stroke-dasharray: 150;
+      stroke-dashoffset: 150;
+      animation: dash 1.8s linear forwards;
+    }
+    .pupil {
+      opacity: 0;
+      animation: fadein 0.6s ease-in 0.5s forwards;
+    }
+    .eyebrows path {
+      @include sketch(4px, 1.6s);
+    }
+    .beard path {
+      @include sketch(-7px, 2.2s);
+    }
+    .hair path {
+      @include sketch(-5px, 2.6s);
+    }
+    .beardtop path {
+      @include sketch(-4px, 2.8s);
+    }
+    .moustach path {
+      @include sketch(-4px, 3.2s);
+    }
+  }
+}
+
 section {
   height: 100vh;
-  padding: 0 15vw;
+  padding: 0 20px;
 
   h1 {
     border: 1px $gold solid;
@@ -260,7 +289,7 @@ section {
   }
 
   &#projects {
-    
+
     h1 {
       display: inline-block;
     }
@@ -272,6 +301,9 @@ section {
 
     ul.rows {
       list-style-type: square;
+      color: $gold;
+
+
 
       h2 {
         margin:0 0 0.5em 0;
