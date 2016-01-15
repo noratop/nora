@@ -12,7 +12,7 @@ $desktop-width: 1024px;
 
 @mixin tablet {
   // @media (min-width: #{$tablet-width}) and (max-width: #{$desktop-width - 1px}) {
-  @media (min-width: #{$tablet-width}) {
+  @media only screen and (min-device-width: #{$tablet-width}){
     @content;
   }
 }
@@ -83,11 +83,11 @@ html {
 // Custom Style
 body {
   margin: 0;
-  padding: 0 0 0 50vw;
+
   font-family: Lato, sans-serif;
   font-weight: 100;
   color: $black;
-  font-size: 1.5em;
+  font-size: 3.7em;
 
   h1 {
     font-weight: 100;
@@ -100,10 +100,46 @@ body {
 
   @include tablet {
     font-size: 1.5em;
+    padding: 0 0 0 50vw;
+
+    font-size: 1.5em;
+
+    .fa-user {
+      display: none;
+    }
+
+    nav {
+      display: inherit;
+      p { font-size: 0.9em;}
+      .job { font-size: 1.4em;}
+
+      .titles {margin-top:1.5em;}
+    }
+
   }
 }
 
+.fa-user {
+  color:$white;
+  font-size: 2.2em;
+  position: absolute;
+  right: 5vw;
+  top: 82vh;
+  background-color: $gold;
+  width: 200px;
+  height:200px;
+  padding: 30px 10px 14px 50px;
+  border-radius: 50%;
+  vertical-align: bottom;
+}
+
+.mobile {
+  display: inherit;
+  width:100vw;
+}
+
 nav {
+  display: none;
   position: fixed;
   left:0;
   height: 100vh;
@@ -188,7 +224,7 @@ nav {
           //justify-content: center;
           //width: 2em;
           //height:2em;
-          font-size: 1.5em;
+          font-size: 1.7em;
 
           a {
 
@@ -258,6 +294,7 @@ header {
 }
 
 section {
+  display: none;
   height: 100vh;
   padding: 0 20px;
 
@@ -337,3 +374,6 @@ section {
   }
 }
 
+.info {
+  display: none;
+}
