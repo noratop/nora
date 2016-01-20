@@ -20,6 +20,7 @@ $(function() {
     $logo = $("#logo");
     $logo_wrapper = $('.logo-wrapper');
     $titles = $(".titles");
+    $nav = $('nav');
 
     $('nav').on('mouseenter',function(){
         $Na.velocity("stop",true).velocity({translateX : -132.5},{delay:0, duration:300});
@@ -38,11 +39,6 @@ $(function() {
         $Tb.velocity("stop",true).velocity({translateX : -150},{delay:400, duration:400}).velocity({translateX : 0},{delay:200, duration:300});
     });
 
-
-    $logo.on('click',function(e){
-        $('header').velocity("scroll", { duration: 1200, easing: "ease-in-out" });
-    })
-
     $eyes = $(".eyes");
     $eyes.css('transform-origin','50% 50%');
 
@@ -53,14 +49,24 @@ $(function() {
         //$Tb.velocity("stop",true).velocity({translateX : 225},{delay:0, duration:400}).velocity({translateX : 105},{delay:400, duration:300});
     });
 
-    $('.fa-user').on('click',function(){
-        $('nav').toggleClass('mobile');
+
+    $logo.on('click',function(e){
+        $('header').velocity("scroll", { duration: 1200, easing: "ease-in-out" });
+    })
+
+
+    $('.mobile-button').on('click',function(){
+        $nav.toggleClass('mobile');
         $Na.velocity("stop",true).velocity({translateX : -132.5},{delay:0, duration:300});
         $Nb.velocity("stop",true).velocity({translateY : -230},{delay:300, duration:300});
         $Ta.velocity("stop",true).velocity({translateY : -230},{delay:500, duration:300});
         $Tb.velocity("stop",true).velocity({translateX : 225},{delay:0, duration:400}).velocity({translateX : 105},{delay:400, duration:300});
-        $logo_wrapper.velocity({ height: '30vh', paddingTop: '5vh', paddingBottom: 0 }, { delay: 500, duration: 1500 });
+        $logo_wrapper.velocity({ height: '30vh', paddingTop: '5vh', paddingBottom: 0, marginBottom: '-2em'}, { delay: 500, duration: 1500 });
 
+        $('nav div.links a').on('click',function mobile(){
+            $nav.toggleClass('mobile');
+            $('nav div.links a').unbind('click',mobile);
+        })
     })
 
 
