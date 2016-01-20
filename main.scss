@@ -347,11 +347,29 @@ section {
       list-style-type: square;
       color: $gold;
 
-      img {
-        width: 50%;
-        float: right;
-        margin: 0 0 0.5em 1em;
-        border: 2px rgba(165, 163, 132, 0.3) solid;
+      //img {
+      //  width: 50%;
+      //  float: right;
+      //  margin: 0 0 0.5em 1em;
+      //  border: 2px rgba(165, 163, 132, 0.3) solid;
+      //}
+
+      ul.images {
+        list-style: none;
+        display: flex;
+        flex-flow: row wrap;
+
+        li {
+          //width: 50%;
+          padding: 0 5px;
+          flex-basis: 50%;
+
+          img {
+            width:100%;
+            background-color: white;
+            cursor: pointer;
+          }
+        }
       }
 
       & > li {
@@ -362,16 +380,28 @@ section {
 
       ul.desc {
         list-style: none;
+        margin-top:1em;
 
         li {
           border : none;
           background-color: none;
+          font-style: italic;
         }
       }
     }
   }
 }
 
-//.info {
-//  display: none;
-//}
+
+.overlay {
+  padding: 100px;
+  position: fixed; top: 0; left: 0; width:100vw; height: 100vh;
+  background-color: rgba(0, 0, 0, 0.75);
+  align-items: center; display: flex; justify-content: center;
+  cursor: pointer;
+
+  img {
+    width:100%;
+    background-color: white;
+  }
+}

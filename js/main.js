@@ -65,6 +65,23 @@ $(function() {
 
 
 
+    $('ul.images img').on('click',function(e){
+        var $overlay = $('<div class="overlay"></div>');
+        var $div= $('<div>');
+        var $img = '<img src="'+$(this).attr("src")+'" alt="'+$(this).attr("alt")+'">';
+
+        console.log(this);
+        $div.append($img);
+        $overlay.append($div);
+        $('body').append($overlay);
+        $overlay.hide();
+
+        $overlay.fadeIn(100);
+
+        $overlay.on('click', function(evt) {
+            $overlay.fadeOut(100);
+        });
+    })
     //$.Velocity.mock = 5;
 
 });
