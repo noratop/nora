@@ -95,7 +95,7 @@ body {
 
   a {
     text-decoration: none;
-    color: $white;
+    color: $gold;
   }
 
   @include tablet {
@@ -192,7 +192,9 @@ nav {
     flex-flow: row nowrap;
     justify-content: center;
     text-align: center;
-    
+
+    a {color: $white;}
+
     ul {
       list-style: none;
       margin: 20px 0 0 0;
@@ -292,11 +294,15 @@ section {
     display: none;
   }
 
+  a {
+    font-weight: bolder;
+  }
+
   .wrapper {
     border-top: 5px $gold solid;
   }
 
-  &#whoiam, &#whatido {
+  &.whoiam, &.whatido {
     .wrapper {
       height: 100vh;
       overflow: auto;
@@ -310,7 +316,7 @@ section {
     }
   }
 
-  &#portfolio {
+  &.portfolio {
     font-size: 0.9em;
 
     h1 {
@@ -319,10 +325,16 @@ section {
     }
 
     h2 {
+      display: inline-block;
       margin:0 0 0.5em 0;
       font-size: 1.3em;
       font-weight:300;
       color: $gray;
+    }
+
+    .fa {
+      color: $gray;
+      margin: 0 0.5em;
     }
 
     ul {

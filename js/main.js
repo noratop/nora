@@ -1,5 +1,6 @@
 $(function() {
 
+    //smooth scrolling
     $('a[href*=#]:not([href=#])').click(function() {
         if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
             var target = $(this.hash);
@@ -13,11 +14,16 @@ $(function() {
         }
     });
 
+    //logo link + smooth scrolling
+    $("#logo").on('click',function(e){
+        $('header').velocity("scroll", { duration: 1200, easing: "ease-in-out" });
+    })
+
+    //svg logo animation
     $Na = $("#Na");
     $Nb = $("#Nb");
     $Ta = $("#Ta");
     $Tb = $("#Tb");
-    $logo = $("#logo");
     $logo_wrapper = $('.logo-wrapper');
     $titles = $(".titles");
     $nav = $('nav');
@@ -39,6 +45,8 @@ $(function() {
         $Tb.velocity("stop",true).velocity({translateX : -150},{delay:400, duration:400}).velocity({translateX : 0},{delay:200, duration:300});
     });
 
+
+    //avatar blinking
     $eyes = $(".eyes");
     $eyes.css('transform-origin','50% 50%');
 
@@ -50,11 +58,7 @@ $(function() {
     });
 
 
-    $logo.on('click',function(e){
-        $('header').velocity("scroll", { duration: 1200, easing: "ease-in-out" });
-    })
-
-
+    //mobile nav animation
     $('.mobile-button').on('click',function(){
         $nav.toggleClass('mobile');
         $Na.velocity("stop",true).velocity({translateX : -132.5},{delay:0, duration:300});
@@ -70,7 +74,7 @@ $(function() {
     })
 
 
-
+    //overlay modal for project images
     $('ul.images img').on('click',function(e){
         var $overlay = $('<div class="overlay"></div>');
         var $div= $('<div>');

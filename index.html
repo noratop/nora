@@ -34,7 +34,7 @@
                 <ul>
                     <li class="info"><a href="#whoiam">Who I am</a></li>
                     <li class="info"><a href="#whatido">What I do</a></li>
-                    <li class="info"><a href="#portfolio">Portfolio</a></li>
+                    <li class="info"><a href="#portfolio">Portfolio and upcomings</a></li>
                     <li class="icon mail"><a href="mailto:top.nora@gmail.com" target="_blank"><i class="fa fa-envelope"></i></a></li>
                     <li class="icon social"><a href="https://www.linkedin.com/in/noratop" target="_blank"><i class="fa fa-linkedin"></i></a></li>
                     <li class="icon social"><a href="https://github.com/noratop" target="_blank"><i class="fa fa-github"></i></a></li>
@@ -533,7 +533,7 @@
 
 </header>
 
-<section id="whoiam">
+<section id="whoiam" class="whoiam">
     <div class="wrapper">
         <div class="box">
             <h1>WHO I AM</h1>
@@ -545,34 +545,39 @@
     </div>
 </section>
 
-<section id="whatido">
+<section id="whatido" class="whatido">
     <div class="wrapper">
         <div class="box">
             <h1>WHAT I DO</h1>
             <p>I code whether I'm at the front or at the back.</p>
             <p>My comfort zone seats on Javascript to build any kind of websites or web applications, using:</p>
             <p>Node.js, Express.js, Loopback, MySQL, Sequelize.js, Parse.</p>
-            <p>React, Backbone, Underscore templating, SASS and jQuery.</p>
-            <p>Build process: GitHub, Grunt, npm, CommonJS, Webpack.</p>
+            <p>React.js, Backbone.js, Underscore.js templating, SASS and jQuery.</p>
+            <p>Build process: Grunt, npm, CommonJS, Webpack.</p>
         </div>
     </div>
 </section>
 
-<section id="portfolio">
+<section id="portfolio" class="portfolio">
     <div class="wrapper">
 
         <h1>Portfolio</h1>
 
         <ul class="rows">
-            <li>
-                <a href="http://www.weathersequencer.xyz/"><h2>The Weather Sequencer</h2></a>
+            <li class="project">
+                <a href="http://www.weathersequencer.xyz/" target="_blank"><h2>The Weather Sequencer </h2><i class="fa fa-external-link"></i></a>
                 <ul class="images">
                     <li><img src="assets/weathersequencer01.png"
                                                                     alt="The Weather Sequencer pic.1"></li>
                     <li><img src="assets/weathersequencer02.png"
                                                                     alt="The Weather Sequencer pic.2"></li>
                 </ul>
-                <p>A single-page application that puts together music and weather. It lets you create and share melodies that will be affected by the local weather.</p>
+                <p>
+                    A single-page application that puts together music and weather. It lets you create and share melodies that will be affected by the local weather.
+                </p>
+                <p>
+                    This is my final project from <a href="http://www.decodemtl.com/" target="_blank">DecodeMTL</a>, a javascript-based coding bootcamp.
+                </p>
 
                 <ul class="desc">
                     <li>Web Audio API using Tone.js</li>
@@ -584,8 +589,8 @@
 
 
             </li>
-            <li>
-                <a href="http://noratop.com/"><h2>My personal website</h2></a>
+            <li class="project">
+                <h2>My personal website</h2>
                 <ul class="images">
                     <li><img src="assets/avatar_design.png" alt="personal website pic.1"></li>
                     <li><img src="assets/business_card_portfolio_flat.png" alt="personal website pic.2"></li>
@@ -597,8 +602,8 @@
                     <li>jQuery</li>
                 </ul>
             </li>
-            <li>
-                <a href="http://awildedge.com/"><h2>A Wild Edge</h2></a>
+            <li class="project">
+                <a href="http://awildedge.com/" target="_blank"><h2>A Wild Edge</h2><i class="fa fa-external-link"></i></a>
                 <ul class="images">
                     <li><img src="assets/awildedge.png" alt="A Wild Edge pic.1"></li>
                     <li><img src="assets/awildedge_bc_1.png" alt="A Wild Edge pic.2"></li>
@@ -615,6 +620,29 @@
         </ul>
     </div>
 
+</section>
+
+<section class="portfolio">
+    <div class="wrapper">
+        <h1>Work in progress</h1>
+        <ul class="rows">
+            <li>Custom WordPress theme for DecodeMTL's official website.</li>
+            <li>Basic demo of a single-page application based on Backbone.js, Loopback framework and MySQL.</li>
+            <li>The Adventure Crawl, a single-page web application based on React and Parse, and final project that I supervised as a TA at DecodeMTL.</li>
+            <li>The Weather Sequencer - extend touch device support.</li>
+        </ul>
+    </div>
+</section>
+
+<section class="portfolio">
+    <div class="wrapper">
+        <h1>Future projects</h1>
+        <ul class="rows">
+            <li>Complete refoundry of A Wild Edge based on each post its own design.</li>
+            <li>Music-based social network.</li>
+            <li>Coding bootcamp extension application.</li>
+        </ul>
+    </div>
 </section>
 
 <script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
