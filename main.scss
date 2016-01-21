@@ -150,6 +150,7 @@ nav {
   height: 100vh;
   width:50vw;
   background-color: $gold;
+  color: $white;
 
   div.logo-wrapper {
     height: 100vh;
@@ -169,7 +170,6 @@ nav {
 
   div.titles {
     text-align: center;
-    color: $white;
 
     h1 {
       margin: 0;
@@ -191,7 +191,6 @@ nav {
     display: flex;
     flex-flow: row nowrap;
     justify-content: center;
-
     text-align: center;
     
     ul {
@@ -204,7 +203,6 @@ nav {
         font-size: 1.3em;
 
         &.info {
-          //padding-left: 70%;
           font-size: 1.1em;
         }
 
@@ -216,25 +214,14 @@ nav {
           }
         }
 
-
         &:not(.icon) + .icon {
           margin-top: 20px;
         }
 
         &.icon {
           display: inline-flex;
-          //display: flex;
-          //flex-flow: row nowrap;
           align-items: center;
-          //justify-content: center;
-          //width: 2em;
-          //height:2em;
           font-size: 1.7em;
-
-          a {
-
-            //padding-right: 80%;
-          }
         }
       }
     }
@@ -299,8 +286,6 @@ header {
 }
 
 section {
-  //display: none;
-  //height: 100vh;
   padding: 0 20px;
 
   h1 {
@@ -312,7 +297,6 @@ section {
   }
 
   &#whoiam, &#whatido {
-
     .wrapper {
       height: 100vh;
       overflow: auto;
@@ -322,13 +306,11 @@ section {
     }
 
     p {
-      //padding: 0 1em;
       font-size: 1.2em;
     }
   }
 
   &#projects {
-
     font-size: 0.9em;
 
     h1 {
@@ -350,14 +332,6 @@ section {
 
     ul.rows {
       list-style-type: square;
-      color: $gold;
-
-      //img {
-      //  width: 50%;
-      //  float: right;
-      //  margin: 0 0 0.5em 1em;
-      //  border: 2px rgba(165, 163, 132, 0.3) solid;
-      //}
 
       ul.images {
         list-style: none;
@@ -365,7 +339,6 @@ section {
         flex-flow: row wrap;
 
         li {
-          //width: 50%;
           padding: 0 5px;
           flex-basis: 50%;
 
@@ -389,7 +362,6 @@ section {
 
         li {
           border : none;
-          background-color: none;
           font-style: italic;
         }
       }
