@@ -1,5 +1,4 @@
 //Colors
-//$gold: #C5B358;
 $gold: #cbaf00;
 $gray: darken(#a5a384,30);
 $white: #fff;
@@ -10,19 +9,12 @@ $logo:$gray;
 $tablet-width: 400px;
 $desktop-width: 1024px;
 
-@mixin tablet {
+@mixin over-tablet {
   // @media (min-width: #{$tablet-width}) and (max-width: #{$desktop-width - 1px}) {
   @media only screen and (min-device-width: #{$tablet-width}){
     @content;
   }
 }
-
-/*
-@mixin desktop {
-  @media (min-width: #{$desktop-width}) {
-    @content;
-  }
-}*/
 
 @mixin sketch($y, $delay) {
   opacity: 0;
@@ -52,19 +44,16 @@ $desktop-width: 1024px;
     transform: translate(0, 0);
   }
 }
-
 @keyframes dash {
   to {
     stroke-dashoffset: 0;
   }
 }
-
 @keyframes fadein {
   to {
     opacity: 1;
   }
 }
-
 @keyframes slideleft {
   to {
     left: 0;
@@ -75,7 +64,6 @@ $desktop-width: 1024px;
 html {
   box-sizing: border-box;
 }
-
 *, *:before, *:after {
   box-sizing: inherit;
 }
@@ -83,7 +71,6 @@ html {
 // Custom Style
 body {
   margin: 0;
-
   font-family: Lato, sans-serif;
   font-weight: 300;
   color: $gold;
@@ -98,7 +85,7 @@ body {
     color: $gold;
   }
 
-  @include tablet {
+  @include over-tablet {
     //font-size: 1.5em;
     padding: 0 0 0 50vw;
     font-weight: 100;
@@ -108,14 +95,17 @@ body {
       display: none;
     }
 
-    nav {
+    .header {
       display: inherit;
       p { font-size: 0.9em;}
-      .job { font-size: 1.4em;}
 
-      .titles {margin-top:1.5em;}
+      &_menu_title {
+        &_wrapper {
+          margin-top:1.5em;
+        }
+        &--job { font-size: 1.4em;}
+      }
     }
-
   }
 }
 
@@ -143,7 +133,7 @@ body {
   }
 }
 
-nav {
+.header {
   display: none;
   position: fixed;
   left:0;
@@ -152,11 +142,11 @@ nav {
   background-color: $gold;
   color: $white;
 
-  div.logo-wrapper {
+  &_logo {
     height: 100vh;
     padding: 30vh 0;
 
-    svg#logo {
+    &_svg {
       display: block;
       width: 100%;
       height: 100%;
@@ -168,95 +158,97 @@ nav {
     }
   }
 
-  div.titles {
-    text-align: center;
-
-    h1 {
-      margin: 0;
-      color: $white;
-    }
+  &_menu {
 
     p {
       margin:0;
       font-size: 0.9em;
     }
 
-    .job {
-      font-size: 1.4em;
-      font-weight:300;
+    &_title {
+      &_wrapper {
+        text-align: center;
+      }
+
+      margin: 0;
+      color: $white;
+
+      &--job {
+        font-size: 1.4em;
+        font-weight:300;
+      }
     }
-  }
 
-  div.links {
-    display: flex;
-    flex-flow: row nowrap;
-    justify-content: center;
-    text-align: center;
+    &_links {
+      display: flex;
+      flex-flow: row nowrap;
+      justify-content: center;
+      text-align: center;
 
-    a {color: $white;}
+      a {color: $white;}
 
-    ul {
-      list-style: none;
-      margin: 20px 0 0 0;
-      padding: 0;
+      &_list {
+        list-style: none;
+        margin: 20px 0 0 0;
+        padding: 0;
 
-      li {
-        padding: 2px 20px;
-        font-size: 1.3em;
+        &_item {
+          padding: 2px 20px;
 
-        &.info {
-          font-size: 1.1em;
-        }
+          &:hover {
+            background-color: $white;
 
-        &:hover {
-          background-color: $white;
-
-          a {
-            color: $gold;
+            a {
+              color: $gold;
+            }
           }
         }
+      }
 
-        &:not(.icon) + .icon {
+      &_info {
+        font-size: 1.1em;
+      }
+
+      &_icon {
+        display: inline-flex;
+        align-items: center;
+        font-size: 1.7em;
+
+        &--first {
           margin-top: 20px;
-        }
-
-        &.icon {
-          display: inline-flex;
-          align-items: center;
-          font-size: 1.7em;
         }
       }
     }
   }
 }
 
-header {
+.avatar {
 
   flex: 1 0;
   height: 100vh;
   padding: 120px 0;
 
-  svg.avatar {
+  &_svg {
     margin: 0 auto;
     display: block;
     width:100%;
     height: 100%;
     fill: $avatar;
 
-    .st1 {
+    &_st1 {
       filter: url(#Adobe_OpacityMaskFilter);
     }
-    .st3 {
+    &_st3 {
       mask: url(#SVGID_1_);
     }
-    .st4 {
+    &_st4 {
       filter: url(#Adobe_OpacityMaskFilter_1_);
     }
-    .st5 {
+    &_st5 {
       mask: url(#SVGID_2_);
     }
 
-    .st0 {
+    &_st0 {
       fill: none;
       stroke: $avatar;
       stroke-linecap: round;
@@ -265,87 +257,93 @@ header {
       stroke-dashoffset: 150;
       animation: dash 1.8s linear forwards;
     }
-    .pupil {
-      opacity: 0;
-      animation: fadein 0.6s ease-in 0.5s forwards;
-    }
-    .eyebrows path {
-      @include sketch(4px, 1.6s);
-    }
-    .beard path {
-      @include sketch(-7px, 2.2s);
-    }
-    .hair path {
-      @include sketch(-5px, 2.6s);
-    }
-    .beardtop path {
-      @include sketch(-4px, 2.8s);
-    }
-    .moustach path {
-      @include sketch(-4px, 3.2s);
-    }
+  }
+
+  &_pupil {
+    opacity: 0;
+    animation: fadein 0.6s ease-in 0.5s forwards;
+  }
+  &_eyebrows path {
+    @include sketch(4px, 1.6s);
+  }
+  &_beard path {
+    @include sketch(-7px, 2.2s);
+  }
+  &_hair path {
+    @include sketch(-5px, 2.6s);
+  }
+  &_beardtop path {
+    @include sketch(-4px, 2.8s);
+  }
+  &_moustach path {
+    @include sketch(-4px, 3.2s);
   }
 }
 
-section {
+.profile {
   padding: 0 20px;
 
-  h1 {
-    display: none;
-  }
-
-  a {
-    font-weight: bolder;
-  }
-
-  .wrapper {
+  &_wrapper {
+    height: 100vh;
+    overflow: auto;
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
     border-top: 5px $gold solid;
   }
 
-  &.whoiam, &.whatido {
-    .wrapper {
-      height: 100vh;
-      overflow: auto;
-      display: flex;
-      flex-flow: row nowrap;
-      align-items: center;
-    }
-
-    p {
-      font-size: 1.2em;
-    }
+  &_title {
+    display: none;
   }
 
-  &.portfolio {
-    font-size: 0.9em;
+  p {
+    font-size: 1.2em;
+  }
+}
 
-    h1 {
-      display: inline-block;
-      font-size: 1 em;
-    }
+.portfolio {
+  padding: 0 20px;
+  font-size: 0.9em;
+  &_wrapper--main {
+    border-top: 5px $gold solid;
+  }
 
-    h2 {
-      display: inline-block;
-      margin:0 0 0.5em 0;
-      font-size: 1.3em;
-      font-weight:300;
-      color: $gray;
-    }
+  ul {
+    margin: 0;
+    padding: 0;
+  }
 
-    .fa {
-      color: $gray;
-      margin: 0 0.5em;
-    }
+  &_link--bolder {
+    font-weight: bolder;
+  }
 
-    ul {
-      margin: 0;
-      padding: 0;
-    }
+  &_title {
+    display: inline-block;
+  }
 
-    ul.rows {
-      list-style-type: square;
+  &_list {
+    list-style-type: square;
 
-      ul.images {
+    &_project {
+      background-color: rgba(165, 163, 132, 0.07);
+      margin: 20px 0;
+      padding: 10px;
+
+      &_title {
+        display: inline-block;
+        margin:0 0 0.5em 0;
+        font-size: 1.3em;
+        font-weight:300;
+        color: $gray;
+      }
+
+      &_link {
+        color: $gray;
+        margin: 0 0.5em;
+      }
+
+      &_images {
+
         list-style: none;
         display: flex;
         flex-flow: row wrap;
@@ -362,13 +360,7 @@ section {
         }
       }
 
-      & > li {
-        background-color: rgba(165, 163, 132, 0.07);
-        margin: 20px 0;
-        padding: 10px;
-      }
-
-      ul.desc {
+      &_desc {
         list-style: none;
         margin-top:1em;
 
@@ -381,7 +373,6 @@ section {
   }
 }
 
-
 .overlay {
   padding: 100px;
   position: fixed; top: 0; left: 0; width:100vw; height: 100vh;
@@ -389,7 +380,7 @@ section {
   align-items: center; display: flex; justify-content: center;
   cursor: pointer;
 
-  img {
+  &_img {
     width:100%;
     background-color: white;
   }

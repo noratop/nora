@@ -1,4 +1,5 @@
 $(function() {
+    //$.Velocity.mock = 5;
 
     //smooth scrolling
     $('a[href*=#]:not([href=#])').click(function() {
@@ -15,8 +16,8 @@ $(function() {
     });
 
     //logo link + smooth scrolling
-    $("#logo").on('click',function(e){
-        $('header').velocity("scroll", { duration: 1200, easing: "ease-in-out" });
+    $(".header_logo_svg").on('click',function(e){
+        $('.avatar').velocity("scroll", { duration: 1200, easing: "ease-in-out" });
     })
 
     //svg logo animation
@@ -24,21 +25,22 @@ $(function() {
     $Nb = $("#Nb");
     $Ta = $("#Ta");
     $Tb = $("#Tb");
-    $logo_wrapper = $('.logo-wrapper');
+    $header_logo = $('.header_logo');
     $titles = $(".titles");
-    $nav = $('nav');
+    $header = $('.header');
+    $links = $('.header_menu_links a');
 
-    $('nav').on('mouseenter',function(){
+    $header.on('mouseenter',function(){
         $Na.velocity("stop",true).velocity({translateX : -132.5},{delay:0, duration:300});
         $Nb.velocity("stop",true).velocity({translateY : -230},{delay:300, duration:300});
         $Ta.velocity("stop",true).velocity({translateY : -230},{delay:500, duration:300});
         $Tb.velocity("stop",true).velocity({translateX : 225},{delay:0, duration:400}).velocity({translateX : 105},{delay:400, duration:300});
-        $logo_wrapper.velocity({ height: '30vh', paddingTop: '5vh', paddingBottom: 0 }, { delay: 500, duration: 1500 });
+        $header_logo.velocity({ height: '30vh', paddingTop: '5vh', paddingBottom: 0 }, { delay: 500, duration: 1500 });
         //$titles.velocity({height:"100%"},{delay:0, duration:500});
     });
 
-    $('nav').on('mouseleave',function(){
-        //$logo_wrapper.velocity("stop",true).velocity({paddingLeft:0,paddingRight:0},{delay:0, duration:200});
+    $header.on('mouseleave',function(){
+        //$header_logo.velocity("stop",true).velocity({paddingLeft:0,paddingRight:0},{delay:0, duration:200});
         $Na.velocity("stop",true).velocity({translateX:- 150},{delay:800, duration:200}).velocity({translateX:0},{delay:100, duration:400});
         $Nb.velocity("stop",true).velocity({translateY:0},{delay:300, duration:230});
         $Ta.velocity("stop",true).velocity({translateY:0},{delay:600, duration:300});
@@ -47,15 +49,15 @@ $(function() {
 
 
     //avatar blinking
-    $eyes = $(".eyes");
-    $eyes.css('transform-origin','50% 50%');
-
-    $('div.right').on('mouseenter',function(){
-        $eyes.velocity("stop",true).velocity({scaleY: 0.1},{delay:0, duration:0});
-        //$Nb.velocity("stop",true).velocity({translateY : -230},{delay:300, duration:300});
-        //$Ta.velocity("stop",true).velocity({translateY : -230},{delay:500, duration:300});
-        //$Tb.velocity("stop",true).velocity({translateX : 225},{delay:0, duration:400}).velocity({translateX : 105},{delay:400, duration:300});
-    });
+    //$eyes = $(".eyes");
+    //$eyes.css('transform-origin','50% 50%');
+    //
+    //$('div.right').on('mouseenter',function(){
+    //    $eyes.velocity("stop",true).velocity({scaleY: 0.1},{delay:0, duration:0});
+    //    //$Nb.velocity("stop",true).velocity({translateY : -230},{delay:300, duration:300});
+    //    //$Ta.velocity("stop",true).velocity({translateY : -230},{delay:500, duration:300});
+    //    //$Tb.velocity("stop",true).velocity({translateX : 225},{delay:0, duration:400}).velocity({translateX : 105},{delay:400, duration:300});
+    //});
 
 
     //mobile nav animation
@@ -65,22 +67,21 @@ $(function() {
         $Nb.velocity("stop",true).velocity({translateY : -230},{delay:300, duration:300});
         $Ta.velocity("stop",true).velocity({translateY : -230},{delay:500, duration:300});
         $Tb.velocity("stop",true).velocity({translateX : 225},{delay:0, duration:400}).velocity({translateX : 105},{delay:400, duration:300});
-        $logo_wrapper.velocity({ height: '30vh', paddingTop: '5vh', paddingBottom: 0, marginBottom: '-2em'}, { delay: 500, duration: 1500 });
+        $header_logo.velocity({ height: '30vh', paddingTop: '5vh', paddingBottom: 0, marginBottom: '-2em'}, { delay: 500, duration: 1500 });
 
-        $('nav div.links a').on('click',function mobile(){
-            $nav.toggleClass('mobile');
-            $('nav div.links a').unbind('click',mobile);
+        $links.on('click',function mobile(){
+            $header.toggleClass('mobile');
+            $links.unbind('click',mobile);
         })
     })
 
 
     //overlay modal for project images
-    $('ul.images img').on('click',function(e){
+    $('.portfolio_list_project_images img').on('click',function(e){
         var $overlay = $('<div class="overlay"></div>');
         var $div= $('<div>');
-        var $img = '<img src="'+$(this).attr("src")+'" alt="'+$(this).attr("alt")+'">';
+        var $img = '<img class="overlay_img" src="'+$(this).attr("src")+'" alt="'+$(this).attr("alt")+'">';
 
-        console.log(this);
         $div.append($img);
         $overlay.append($div);
         $('body').append($overlay);
@@ -92,6 +93,5 @@ $(function() {
             $overlay.fadeOut(100);
         });
     })
-    //$.Velocity.mock = 5;
 
 });
