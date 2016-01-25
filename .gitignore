@@ -4,3 +4,4 @@ node_modules
 .sass-cache
 *.css*
 assets/css
+assets/js/*bundle*.js

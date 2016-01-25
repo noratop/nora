@@ -1,3 +1,5 @@
+require('./Velocity');
+
 $(function() {
     //$.Velocity.mock = 5;
 
