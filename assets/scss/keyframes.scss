@@ -1,0 +1,15 @@
+@keyframes retranslate {
+  to {
+    transform: translate(0, 0);
+  }
+}
+@keyframes dash {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+@keyframes fadein {
+  to {
+    opacity: 1;
+  }
+}

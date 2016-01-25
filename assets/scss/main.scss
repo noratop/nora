@@ -1,3 +1,6 @@
+@import 'mixins';
+@import 'keyframes';
+
 //Colors
 $gold: #cbaf00;
 $gray: darken(#a5a384,30);
@@ -5,60 +8,6 @@ $white: #fff;
 $black: #343434;
 $avatar:$gray;
 $logo:$gray;
-
-$tablet-width: 400px;
-$desktop-width: 1024px;
-
-@mixin over-tablet {
-  // @media (min-width: #{$tablet-width}) and (max-width: #{$desktop-width - 1px}) {
-  @media only screen and (min-device-width: #{$tablet-width}){
-    @content;
-  }
-}
-
-@mixin sketch($y, $delay) {
-  opacity: 0;
-  // animation:
-  transform: translateY($y);
-  animation: fadein 0.15s ease-in forwards, retranslate 0.15s linear forwards;
-
-  &:nth-child(n) {
-    animation-delay: $delay;
-  }
-
-  &:nth-child(odd) {
-    animation-delay: $delay + 0.2s;
-  }
-
-  &:nth-child(3n) {
-    animation-delay: $delay + 0.4s;
-  }
-
-  &:nth-child(3n+2) {
-    animation-delay: $delay + 0.6s;
-  }
-}
-
-@keyframes retranslate {
-  to {
-    transform: translate(0, 0);
-  }
-}
-@keyframes dash {
-  to {
-    stroke-dashoffset: 0;
-  }
-}
-@keyframes fadein {
-  to {
-    opacity: 1;
-  }
-}
-@keyframes slideleft {
-  to {
-    left: 0;
-  }
-}
 
 // Paul Irish Box-Model
 html {
@@ -74,7 +23,7 @@ body {
   font-family: Lato, sans-serif;
   font-weight: 300;
   color: $gold;
-  font-size: 3.7em;
+  font-size: 3.5em;
 
   h1 {
     font-weight: 100;
@@ -106,30 +55,10 @@ body {
         &--job { font-size: 1.4em;}
       }
     }
-  }
-}
 
-.mobile-button {
-  color:$white;
-  font-size: 2.2em;
-  position: fixed;
-  right: 5vw;
-  top: 82vh;
-  background-color: $gold;
-  width: 200px;
-  height:200px;
-  padding: 30px 10px 15px 35px;
-  border-radius: 50%;
-  vertical-align: bottom;
-  border: 2px white solid;
-}
-
-.mobile {
-  display: inherit;
-  width:100vw;
-
-  div.links li {
-    margin: 0.2em 0;
+    .portfolio_list_project_images li {
+      flex-basis: 50%;
+    }
   }
 }
 
@@ -350,7 +279,7 @@ body {
 
         li {
           padding: 0 5px;
-          flex-basis: 50%;
+          flex-basis: 100%;
 
           img {
             width:100%;
@@ -383,5 +312,35 @@ body {
   &_img {
     width:100%;
     background-color: white;
+  }
+}
+
+.mobile-button {
+  opacity: 0.9;
+  color:$white;
+  font-size: 2.3em;
+  position: fixed;
+  right: 5vw;
+  top: 82vh;
+  background-color: $gold;
+  width: 200px;
+  height:200px;
+  padding: 20px 0px 0px 61px;
+  border-radius: 50%;
+  vertical-align: bottom;
+  border: 2px white solid;
+  transition: transform 0.5s;
+
+  &--rotate {
+    transform: rotate(180deg);
+  }
+}
+
+.mobile {
+  display: inherit;
+  width:100vw;
+
+  .header_menu_links_list_item {
+    margin: 0.2em 0;
   }
 }

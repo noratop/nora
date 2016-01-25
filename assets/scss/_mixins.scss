@@ -1,0 +1,32 @@
+$tablet-width: 400px;
+$desktop-width: 1024px;
+
+@mixin over-tablet {
+  // @media (min-width: #{$tablet-width}) and (max-width: #{$desktop-width - 1px}) {
+  @media only screen and (min-device-width: #{$tablet-width}){
+    @content;
+  }
+}
+
+@mixin sketch($y, $delay) {
+  opacity: 0;
+  // animation:
+  transform: translateY($y);
+  animation: fadein 0.15s ease-in forwards, retranslate 0.15s linear forwards;
+
+  &:nth-child(n) {
+    animation-delay: $delay;
+  }
+
+  &:nth-child(odd) {
+    animation-delay: $delay + 0.2s;
+  }
+
+  &:nth-child(3n) {
+    animation-delay: $delay + 0.4s;
+  }
+
+  &:nth-child(3n+2) {
+    animation-delay: $delay + 0.6s;
+  }
+}
