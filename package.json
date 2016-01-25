@@ -1,0 +1,12 @@
+{
+  "name": "noratop.com",
+  "version": "0.1.0",
+  "author": "Nora Top <top.nora@gmail.com>",
+  "private": true,
+  "dependencies": {
+    "jquery": "^2.2.0"
+  },
+  "devDependencies": {
+    "webpack": "^1.12.12"
+  }
+}
