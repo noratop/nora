@@ -3,5 +3,6 @@
 node_modules
 .sass-cache
 *.css*
-assets/css
-assets/js/*bundle*.js
+/src/assets/css
+/src/assets/js/*app-bundle*
+/dist
