@@ -169,12 +169,12 @@ module.exports = function(grunt) {
                 }
             }
         },
-        //'gh-pages': {
-        //    options: {
-        //        base: 'dist-jekyll'
-        //    },
-        //    src: ['**']
-        //},
+        'gh-pages': {
+           options: {
+               base: 'dist-jekyll'
+           },
+           src: ['**']
+        },
         clean: {
             dist: ['dist']
         },

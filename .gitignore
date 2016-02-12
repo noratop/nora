@@ -6,4 +6,5 @@ node_modules
 /src/assets/css
 /src/assets/js/*app-bundle*
 /dist
+/dist-jekyll
 /_site
