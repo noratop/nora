@@ -2,18 +2,20 @@
 <html>
 <head>
     <meta charset="utf-8">
-    <title>Nora Top | Full-Stack Web Developer</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title> | Nora Top | Full-Stack Web Developer</title>
+    <link rel="icon" type="image/png" sizes="any" href="/assets/img/noratop_favicon.png">
     <link rel="stylesheet" href="https://necolas.github.io/normalize.css/3.0.2/normalize.css" media="screen" title="no title" charset="utf-8">
     <link href='https://fonts.googleapis.com/css?family=Lato:100,300' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
-    <link rel="stylesheet" type="text/css" href="assets/css/main.css">
+    <link rel="stylesheet" type="text/css" href="/assets/css/main.css">
 </head>
-<body>
+<body class="">
 <header class="header">
         <div class="header_logo">
             <svg version="1.1" class="header_logo_svg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 710.7 447.3" style="enable-background:new 0 0 710.7 447.3;" xml:space="preserve">
                 <rect id="Na" x="276.1" width="73.9" height="217.3"/>
-                <polygon id="Nb" points="350,230.5 350,447.3 217.5,230.5 "/>
+                <polygon id="Nb" points="350,230.5 350,447.3 217.5,230.5"/>
                 <rect id="Ta" x="361.7" y="230.5" width="217.3" height="73.9"/>
                 <polygon id="Tb" points="362,217.5 362,74 471.1,217.5 "/>
             </svg>
@@ -22,7 +24,7 @@
             <div class="header_menu_title_wrapper">
                 <h1 class="header_menu_title header_menu_title--name">NORA TOP</h1>
                 <h1 class="header_menu_title header_menu_title--job">Web Developer</h1>
-                <p>Montreal, Canada</p>
+                <p class="header_menu_title_location">Montreal, Canada</p>
             </div>
 
             <div class="header_menu_links">
@@ -39,7 +41,10 @@
             </div>
         </div>
 </header>
-<i class="mobile-button fa fa-caret-up"></i>
+
+<div class="mobile">
+  <i class="mobile_button fa fa-caret-up"></i>
+</div>
 <div class="avatar">
     <svg class="avatar_svg" version="1.1" id="Layer_1" xmlns:inkpad="http://taptrix.com/inkpad/svg_extensions"
              xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="78.8 481.6 262.7 454.4"
@@ -524,8 +529,10 @@
 
     </svg>
 </div>
+
+
 <section id="whoiam" class="profile">
-    <div class="profile_wrapper">
+    <div class="profile_wrapper separator">
         <div>
             <h1 class="profile_title">WHO I AM</h1>
             <p>Hi, my name is Nora.</p>
@@ -535,8 +542,9 @@
         </div>
     </div>
 </section>
+
 <section id="whatido" class="profile">
-    <div class="profile_wrapper">
+    <div class="profile_wrapper separator">
         <div>
             <h1 class="profile_title">WHAT I DO</h1>
             <p>I code whether I'm at the front or at the back.</p>
@@ -547,88 +555,226 @@
         </div>
     </div>
 </section>
+
 <section id="portfolio" class="portfolio">
-    <div class="portfolio_wrapper portfolio_wrapper--main">
+    <div class="portfolio_wrapper separator">
 
         <h1 class="portfolio_title">Portfolio</h1>
 
-        <ul class="portfolio_list">
-            <li class="portfolio_list_project">
+        <ul class="portfolio_projectlist">
+            
+            <li class="portfolio_projectlist_project">
+                <a href="" target="_blank">
+                    <h2 class="portfolio_projectlist_project_title">DecodeMTL Wordpress Theme</h2>
+                    <i class="portfolio_projectlist_project_link fa fa-external-link"></i>
+                </a>
+                <ul class="portfolio_projectlist_project_imageslist">
+                  
+                    <li class="portfolio_projectlist_project_imageslist_item"><img src="/assets/img/decodemtl1.png" alt="DecodeMTL Wordpress Theme image-1"></li>
+                  
+                    <li class="portfolio_projectlist_project_imageslist_item"><img src="/assets/img/decodemtl2.png" alt="DecodeMTL Wordpress Theme image-2"></li>
+                  
+                    <li class="portfolio_projectlist_project_imageslist_item"><img src="/assets/img/decodemtl3.png" alt="DecodeMTL Wordpress Theme image-3"></li>
+                  
+                    <li class="portfolio_projectlist_project_imageslist_item"><img src="/assets/img/decodemtl4.png" alt="DecodeMTL Wordpress Theme image-4"></li>
+                  
+                </ul>
+                
+                  <p>DecodeMTL's website migration from Jekyll to Wordpress, including Advanced Custom Fields Pro and WPML Multilanguage plugins.</p>
+                
+                <ul class="portfolio_projectlist_project_descriptionlist">
+                  
+                    <li class="portfolio_projectlist_project_descriptionlist_item">Custom Posts / custom fields</li>
+                  
+                    <li class="portfolio_projectlist_project_descriptionlist_item">Post/Page templates</li>
+                  
+                    <li class="portfolio_projectlist_project_descriptionlist_item">Custom admin screens</li>
+                  
+                    <li class="portfolio_projectlist_project_descriptionlist_item">Multilanguage support</li>
+                  
+                </ul>
+            </li>
+            
+            <li class="portfolio_projectlist_project">
+                <a href="http://busbud-front-end-challenge.herokuapp.com/" target="_blank">
+                    <h2 class="portfolio_projectlist_project_title">Front-end React/Redux application</h2>
+                    <i class="portfolio_projectlist_project_link fa fa-external-link"></i>
+                </a>
+                <ul class="portfolio_projectlist_project_imageslist">
+                  
+                    <li class="portfolio_projectlist_project_imageslist_item"><img src="/assets/img/busbud1.png" alt="Front-end React/Redux application image-1"></li>
+                  
+                    <li class="portfolio_projectlist_project_imageslist_item"><img src="/assets/img/busbud2.png" alt="Front-end React/Redux application image-2"></li>
+                  
+                </ul>
+                
+                  <p>Small front-end web app built for the Busbud coding challenge, with multilanguage and sorting results support.</p>
+                
+                <ul class="portfolio_projectlist_project_descriptionlist">
+                  
+                    <li class="portfolio_projectlist_project_descriptionlist_item">React / Redux</li>
+                  
+                    <li class="portfolio_projectlist_project_descriptionlist_item">React router</li>
+                  
+                    <li class="portfolio_projectlist_project_descriptionlist_item">Webpack / ES6</li>
+                  
+                    <li class="portfolio_projectlist_project_descriptionlist_item">Express</li>
+                  
+                </ul>
+            </li>
+            
+            <li class="portfolio_projectlist_project">
+                <a href="http://noratop.com/" target="_blank">
+                    <h2 class="portfolio_projectlist_project_title">My personal website</h2>
+                    <i class="portfolio_projectlist_project_link fa fa-external-link"></i>
+                </a>
+                <ul class="portfolio_projectlist_project_imageslist">
+                  
+                    <li class="portfolio_projectlist_project_imageslist_item"><img src="/assets/img/avatar_design.png" alt="My personal website image-1"></li>
+                  
+                    <li class="portfolio_projectlist_project_imageslist_item"><img src="/assets/img/business_card_portfolio_flat.png" alt="My personal website image-2"></li>
+                  
+                </ul>
+                
+                <ul class="portfolio_projectlist_project_descriptionlist">
+                  
+                    <li class="portfolio_projectlist_project_descriptionlist_item">Graphic design</li>
+                  
+                    <li class="portfolio_projectlist_project_descriptionlist_item">From sketching to SVG animation: CSS Animation & Velocity.js</li>
+                  
+                    <li class="portfolio_projectlist_project_descriptionlist_item">jQuery</li>
+                  
+                </ul>
+            </li>
+            
+            <li class="portfolio_projectlist_project">
                 <a href="http://www.weathersequencer.xyz/" target="_blank">
-                    <h2 class="portfolio_list_project_title">The Weather Sequencer </h2>
-                    <i class="portfolio_list_project_link fa fa-external-link"></i>
+                    <h2 class="portfolio_projectlist_project_title">The Weather Sequencer</h2>
+                    <i class="portfolio_projectlist_project_link fa fa-external-link"></i>
                 </a>
-                <ul class="portfolio_list_project_images">
-                    <li><img src="assets/img/weathersequencer01.png" alt="The Weather Sequencer pic.1"></li>
-                    <li><img src="assets/img/weathersequencer02.png" alt="The Weather Sequencer pic.2"></li>
+                <ul class="portfolio_projectlist_project_imageslist">
+                  
+                    <li class="portfolio_projectlist_project_imageslist_item"><img src="/assets/img/weathersequencer01.png" alt="The Weather Sequencer image-1"></li>
+                  
+                    <li class="portfolio_projectlist_project_imageslist_item"><img src="/assets/img/weathersequencer02.png" alt="The Weather Sequencer image-2"></li>
+                  
                 </ul>
-                <p>A single-page application that puts together music and weather. It lets you create and share melodies that will be affected by the local weather.</p>
-                <p>This is my final project from <a href="http://www.decodemtl.com/web-development-full-time/" target="_blank" class="portfolio_link--bolder">DecodeMTL</a>, a javascript-based coding bootcamp.</p>
-
-                <ul class="portfolio_list_project_desc">
-                    <li>Web Audio API using Tone.js</li>
-                    <li>Canvas interface using NexusUI</li>
-                    <li>Forecast.io weather API</li>
-                    <li>Google's Reverse Geocoding API</li>
-                    <li>jQuery</li>
-                </ul>
-
-
-            </li>
-            <li class="portfolio_list_project">
-                <h2 class="portfolio_list_project_title">My personal website</h2>
-                <ul class="portfolio_list_project_images">
-                    <li><img src="assets/img/avatar_design.png" alt="personal website pic.1"></li>
-                    <li><img src="assets/img/business_card_portfolio_flat.png" alt="personal website pic.2"></li>
-                </ul>
-                <ul class="portfolio_list_project_desc">
-                    <li>Graphic design</li>
-                    <li>From sketching to SVG animation: CSS Animation &#38; Velocity.js</li>
-                    <li>jQuery</li>
+                
+                  <p>A single-page application that puts together music and weather. It lets you create and share melodies that will be affected by the local weather.</p>
+                
+                  <p>This is my final project from DecodeMTL, a javascript-based coding bootcamp.</p>
+                
+                <ul class="portfolio_projectlist_project_descriptionlist">
+                  
+                    <li class="portfolio_projectlist_project_descriptionlist_item">Web Audio API using Tone.js</li>
+                  
+                    <li class="portfolio_projectlist_project_descriptionlist_item">Canvas interface using NexusUI</li>
+                  
+                    <li class="portfolio_projectlist_project_descriptionlist_item">Forecast.io weather API</li>
+                  
+                    <li class="portfolio_projectlist_project_descriptionlist_item">Google's Reverse Geocoding API</li>
+                  
+                    <li class="portfolio_projectlist_project_descriptionlist_item">jQuery</li>
+                  
                 </ul>
             </li>
-            <li class="portfolio_list_project">
+            
+            <li class="portfolio_projectlist_project">
                 <a href="http://awildedge.com/" target="_blank">
-                    <h2 class="portfolio_list_project_title">A Wild Edge</h2>
-                    <i class="portfolio_list_project_link fa fa-external-link"></i>
+                    <h2 class="portfolio_projectlist_project_title">A Wild Edge</h2>
+                    <i class="portfolio_projectlist_project_link fa fa-external-link"></i>
                 </a>
-                <ul class="portfolio_list_project_images">
-                    <li><img src="assets/img/awildedge.png" alt="A Wild Edge pic.1"></li>
-                    <li><img src="assets/img/awildedge_bc_1.png" alt="A Wild Edge pic.2"></li>
-                    <li><img src="assets/img/awildedge_bc_2.png" alt="A Wild Edge pic.3"></li>
+                <ul class="portfolio_projectlist_project_imageslist">
+                  
+                    <li class="portfolio_projectlist_project_imageslist_item"><img src="/assets/img/awildedge.png" alt="A Wild Edge image-1"></li>
+                  
+                    <li class="portfolio_projectlist_project_imageslist_item"><img src="/assets/img/awildedge_bc_1.png" alt="A Wild Edge image-2"></li>
+                  
+                    <li class="portfolio_projectlist_project_imageslist_item"><img src="/assets/img/awildedge_bc_2.png" alt="A Wild Edge image-3"></li>
+                  
                 </ul>
-                <p>A Wild Edge is a photography project by Celine Larbaletrier.</p>
-                <ul class="portfolio_list_project_desc">
-                    <li>Graphic design (logo &#38; business cards)</li>
+                
+                  <p>A Wild Edge is a photography project by Celine Larbaletrier.</p>
+                
+                <ul class="portfolio_projectlist_project_descriptionlist">
+                  
+                    <li class="portfolio_projectlist_project_descriptionlist_item">Graphic design (logo & business cards)</li>
+                  
                 </ul>
             </li>
-
+            
         </ul>
     </div>
-
 </section>
+
 <section class="portfolio">
     <div class="portfolio_wrapper">
         <h1 class="portfolio_title">Work in progress</h1>
-        <ul class="portfolio_list">
-            <li class="portfolio_list_project">WordPress theme for DecodeMTL's official website.</li>
-            <li class="portfolio_list_project">Basic demo of a single-page application based on Backbone.js, Loopback framework and MySQL.</li>
-            <li class="portfolio_list_project">The Adventure Crawl, a single-page web application based on React and Parse, and final project that I supervised as a TA at DecodeMTL.</li>
-            <li class="portfolio_list_project">The Weather Sequencer - extend touch device support/add MIDI Controller support</li>
+        <ul class="portfolio_projectlist">
+          
+            <li class="portfolio_projectlist_project">
+              
+                <p>
+                  Basic demo of a single-page application based on Backbone.js, Loopback framework and MySQL.
+                </p>
+              
+            </li>
+          
+            <li class="portfolio_projectlist_project">
+              
+                <p>
+                  The Adventure Crawl, a single-page web application based on React and Parse, and final project that I supervised as a TA at DecodeMTL.
+                </p>
+              
+            </li>
+          
+            <li class="portfolio_projectlist_project">
+              
+                <p>
+                  The Weather Sequencer - extend touch device support/add MIDI Controller support.
+                </p>
+              
+            </li>
+          
         </ul>
     </div>
 </section>
 <section class="portfolio">
     <div class="portfolio_wrapper">
         <h1 class="portfolio_title">Future projects</h1>
-        <ul class="portfolio_list">
-            <li class="portfolio_list_project">Complete refoundry of A Wild Edge based on each post its own design.</li>
-            <li class="portfolio_list_project">Music-oriented social network.</li>
-            <li class="portfolio_list_project">Coding bootcamp extension app</li>
+        <ul class="portfolio_projectlist">
+          
+            <li class="portfolio_projectlist_project">
+              
+                <p>
+                  Complete refoundry of A Wild Edge based on each post its own design.
+                </p>
+              
+            </li>
+          
+            <li class="portfolio_projectlist_project">
+              
+                <p>
+                  Music-oriented sharing platform
+                </p>
+              
+            </li>
+          
+            <li class="portfolio_projectlist_project">
+              
+                <p>
+                  Coding bootcamp final project app.
+                </p>
+              
+            </li>
+          
         </ul>
     </div>
 </section>
-<script src="assets/js/bundle.js"></script>
+
+
+
+<script src="/assets/js/app-bundle.js"></script>
 <script>
     (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
                 (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
