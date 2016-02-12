@@ -1,7 +1,7 @@
-$tablet-width: 400px;
+$tablet-width: 480px;
 $desktop-width: 1024px;
 
-@mixin over-tablet {
+@mixin over-mobile {
   // @media (min-width: #{$tablet-width}) and (max-width: #{$desktop-width - 1px}) {
   @media only screen and (min-width: #{$tablet-width}){
     @content;

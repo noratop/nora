@@ -1,0 +1,30 @@
+<section id="portfolio" class="portfolio">
+    <div class="portfolio_wrapper separator">
+
+        <h1 class="portfolio_title">Portfolio</h1>
+
+        <ul class="portfolio_projectlist">
+            {% for project in site.data.portfolio.list %}
+            <li class="portfolio_projectlist_project">
+                <a href="{{project.link}}" target="_blank">
+                    <h2 class="portfolio_projectlist_project_title">{{project.title}}</h2>
+                    <i class="portfolio_projectlist_project_link fa fa-external-link"></i>
+                </a>
+                <ul class="portfolio_projectlist_project_imageslist">
+                  {% for file in project.screenshots %}
+                    <li class="portfolio_projectlist_project_imageslist_item"><img src="/assets/img/{{file}}" alt="{{project.title}} image-{{forloop.index}}"></li>
+                  {% endfor %}
+                </ul>
+                {% for paraph in project.description.paragraph %}
+                  <p>{{paraph}}</p>
+                {% endfor %}
+                <ul class="portfolio_projectlist_project_descriptionlist">
+                  {% for item in project.description.list %}
+                    <li class="portfolio_projectlist_project_descriptionlist_item">{{item}}</li>
+                  {% endfor %}
+                </ul>
+            </li>
+            {% endfor %}
+        </ul>
+    </div>
+</section>

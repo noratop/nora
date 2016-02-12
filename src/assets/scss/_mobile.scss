@@ -1,0 +1,52 @@
+.header {
+  &--mobile {
+    display: inherit;
+    width:100vw;
+    height: 80vh;
+    z-index: 2;
+  }
+}
+
+.mobile {
+  @include over-mobile {
+    display: none;
+  }
+
+  position: fixed;
+  // top: 88vh;
+  // left: 80vw;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-end;
+
+  &--visible {
+    background-color: $gold;
+
+    .fa {
+      transform: rotate(180deg);
+    }
+  }
+
+  &_button {
+    text-align: center;
+    align-self: flex-end;
+    opacity: 0.9;
+    color:$white;
+    margin: 0 20px 20px 0;
+    font-size: 2.3em;
+    background-color: $gold;
+    width: 80px;
+    height:80px;
+    padding-top: 8px;
+    border-radius: 50%;
+    vertical-align: bottom;
+    border: 1px white solid;
+    transition: transform 0.5s;
+
+    &--rotate {
+
+    }
+  }
+}

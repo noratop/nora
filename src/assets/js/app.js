@@ -1,5 +1,4 @@
 window.jQuery = window.$ = $ = require('jquery');
-require('./Velocity');
 require('./animation');
 
 $(function() {
@@ -19,7 +18,7 @@ $(function() {
     });
 
     //overlay modal for project images
-    $('.portfolio_list_project_images img').on('click',function(e){
+    $('.portfolio_projectlist_project_imageslist_item img').on('click',function(e){
         var $overlay = $('<div class="overlay"></div>');
         var $div= $('<div>');
         var $img = '<img class="overlay_img" src="'+$(this).attr("src")+'" alt="'+$(this).attr("alt")+'">';

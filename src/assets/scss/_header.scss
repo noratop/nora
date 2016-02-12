@@ -1,0 +1,113 @@
+.header {
+  display: none;
+  position: fixed;
+  left:0;
+  height: 100vh;
+  width:50vw;
+  background-color: $gold;
+  color: $white;
+
+  &_logo {
+    height: 100vh;
+    padding: 30vh 0;
+
+    &_svg {
+      display: block;
+      width: 100%;
+      height: 100%;
+      fill: $logo;
+
+      rect, polygon {box-shadow: 2px 2px 5px black;}
+    }
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+  &_menu {
+
+    p {
+      margin:0;
+      // font-size: 0.9em;
+    }
+
+    &_title {
+      margin: 0;
+      color: $white;
+
+      &_wrapper {
+        text-align: center;
+      }
+      &_location {
+        font-size: smaller;
+      }
+      &--job {
+        // font-size: 1.4em;
+        font-weight:300;
+      }
+    }
+
+    &_links {
+      display: flex;
+      flex-flow: row nowrap;
+      justify-content: center;
+      text-align: center;
+
+      a {color: $white;}
+
+      &_list {
+        list-style: none;
+        margin: 20px 0 0 0;
+        padding: 0;
+
+        &_item {
+          padding: 2px 20px;
+
+          &:hover {
+            background-color: $white;
+
+            a {
+              color: $gold;
+            }
+          }
+        }
+      }
+
+      &_icon {
+        display: inline-flex;
+        align-items: center;
+
+        .fa {font-size: 1.2em;}
+
+        &--first {
+          margin-top: 25px;
+        }
+      }
+    }
+  }
+
+  @include over-mobile {
+    display: inherit;
+    // p { font-size: 0.9em;}
+
+    &_menu {
+      &_title {
+        &_wrapper {
+          margin-top:1.5em;
+        }
+      &--name {font-size: 2.15em;}
+      &--job { font-size: 1.55em;}
+      }
+
+      &_links {
+        &_info {
+          font-size: 1.2em;
+        }
+        &_icon {
+          .fa {font-size: 1.8em;}
+        }
+      }
+    }
+  }
+}

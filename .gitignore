@@ -6,3 +6,4 @@ node_modules
 /src/assets/css
 /src/assets/js/*app-bundle*
 /dist
+/_site

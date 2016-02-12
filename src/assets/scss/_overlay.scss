@@ -1,0 +1,12 @@
+.overlay {
+  padding: 100px;
+  position: fixed; top: 0; left: 0; width:100vw; height: 100vh;
+  background-color: rgba(0, 0, 0, 0.75);
+  align-items: center; display: flex; justify-content: center;
+  cursor: pointer;
+
+  &_img {
+    width:100%;
+    background-color: white;
+  }
+}

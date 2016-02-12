@@ -7,24 +7,24 @@ module.exports = function(grunt) {
                 options: {
                     logConcurrentOutput: true
                 },
-                //tasks: ['watch:sass', 'webpack:dev', 'jekyll:dev']
-                tasks: ['watch:sass', 'webpack:dev']
+                tasks: ['watch:sass', 'webpack:dev', 'jekyll:dev']
+                // tasks: ['watch:sass', 'webpack:dev']
             }
         },
-        //jekyll: {
-        //    dev: {
-        //        options: {
-        //            src: 'src',
-        //            serve: true
-        //        }
-        //    },
-        //    dist: {
-        //        options: {
-        //            src: 'dist',
-        //            dest: 'dist-jekyll'
-        //        }
-        //    }
-        //},
+        jekyll: {
+           dev: {
+               options: {
+                   src: 'src',
+                   serve: true
+               }
+           },
+           dist: {
+               options: {
+                   src: 'dist',
+                   dest: 'dist-jekyll'
+               }
+           }
+        },
         webpack: {
             dev: {
                 watch: true,
@@ -44,9 +44,9 @@ module.exports = function(grunt) {
                         __dirname + '/src/assets/js',
                         //__dirname + '/parse/cloud'
                     ],
-                    alias: {
-                        foundation: 'foundation/js/foundation'
-                    }
+                    // alias: {
+                    //     foundation: 'foundation/js/foundation'
+                    // }
                 },
                 plugins: [
                     new webpack.ProvidePlugin({
@@ -79,9 +79,9 @@ module.exports = function(grunt) {
                         __dirname + '/src/assets/js',
                         //__dirname + '/parse/cloud'
                     ],
-                    alias: {
-                        foundation: 'foundation/js/foundation'
-                    }
+                    // alias: {
+                    //     foundation: 'foundation/js/foundation'
+                    // }
                 },
                 plugins: [
                     new webpack.ProvidePlugin({
@@ -203,12 +203,12 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-webpack');
     //grunt.loadNpmTasks('grunt-modernizr');
-    //grunt.loadNpmTasks('grunt-gh-pages');
-    //grunt.loadNpmTasks('grunt-jekyll');
+    grunt.loadNpmTasks('grunt-gh-pages');
+    grunt.loadNpmTasks('grunt-jekyll');
     grunt.loadNpmTasks('grunt-contrib-imagemin');
 
     grunt.registerTask('dev', ['concurrent:dev']);
     //grunt.registerTask('build', ['clean:dist', 'copy:dist', 'imagemin:dist', 'webpack:dist', 'uglify:app', 'modernizr:dist', 'sass:dist', 'jekyll:dist']);
-    grunt.registerTask('build', ['clean:dist', 'copy:dist', 'imagemin:dist', 'webpack:dist', 'uglify:app', 'sass:dist']);
-    //grunt.registerTask('deploy', ['build', 'gh-pages']);
+    grunt.registerTask('build', ['clean:dist', 'copy:dist', 'imagemin:dist', 'webpack:dist', 'uglify:app', 'sass:dist', 'jekyll:dist']);
+    grunt.registerTask('deploy', ['build', 'gh-pages']);
 };
