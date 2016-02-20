@@ -244,10 +244,19 @@ body {
         display: inline-block;
         margin: 0 0 0.5em 0;
         font-weight: 300;
-        color: #53523d; }
-      .portfolio_projectlist_project_link {
         color: #53523d;
-        margin: 0 0.5em; }
+        font-size: 1em; }
+        @media only screen and (min-width: 769px) {
+          .portfolio_projectlist_project_title {
+            font-size: 1.2em; } }
+      .portfolio_projectlist_project_link {
+        display: inline-block;
+        color: #53523d;
+        margin: 0 0.5em;
+        font-size: 1em; }
+        @media only screen and (min-width: 769px) {
+          .portfolio_projectlist_project_link {
+            font-size: 1.2em; } }
       .portfolio_projectlist_project_imageslist {
         margin: 0;
         padding: 0;
