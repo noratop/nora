@@ -1,6 +1,23 @@
 {
   "list": [
     {
+      "title": "Salesfloor front-end app",
+      "link": "http://noratop.github.io/salesfloor-challenge/",
+      "screenshots":["salesfloor1.png"],
+      "description":
+        {
+          "paragraph": [
+            "Small front-end web app built for the Salesfloor technical test. Finds restaurants around a given location."
+            ],
+          "list":[
+            "React / Redux",
+            "Geolocation",
+            "GoogleMap / Google Places",
+            "Webpack / ES6",
+            ]
+        }
+    },
+    {
       "title": "DecodeMTL Wordpress Theme",
       "link": "",
       "screenshots":["decodemtl1.png","decodemtl2.png","decodemtl3.png","decodemtl4.png"],
@@ -18,13 +35,13 @@
         }
     },
     {
-      "title": "Front-end React/Redux application",
+      "title": "Busbud front-end app",
       "link": "http://busbud-front-end-challenge.herokuapp.com/",
       "screenshots":["busbud1.png","busbud2.png"],
       "description":
         {
           "paragraph": [
-            "Small front-end web app built for the Busbud coding challenge, with multilanguage and sorting results support."
+            "Small front-end web app built for the Busbud coding challenge. Lists bus tickets with multilanguage and sorting results support."
             ],
           "list":[
             "React / Redux",
