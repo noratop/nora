@@ -77,6 +77,15 @@
           font-style: italic;
         }
       }
+
+      &_code {
+        margin-top: 1em;
+        display: block;
+        font-style: italic;
+        font-size: smaller;
+        color:$gray;
+        text-decoration: underline;
+      }
     }
   }
 }

@@ -15,7 +15,8 @@
             "GoogleMap / Google Places",
             "Webpack / ES6",
             ]
-        }
+        },
+      "code":"https://github.com/noratop/salesfloor-challenge"
     },
     {
       "title": "DecodeMTL Wordpress Theme",
@@ -32,7 +33,8 @@
             "Custom admin screens",
             "Multilanguage support"
             ]
-        }
+        },
+      "code":""
     },
     {
       "title": "Busbud front-end app",
@@ -49,7 +51,8 @@
             "Webpack / ES6",
             "Express"
             ]
-        }
+        },
+      "code":"https://github.com/noratop/coding-challenge-frontend-b"
     },
     {
       "title": "My personal website",
@@ -64,7 +67,8 @@
             "From sketching to SVG animation: CSS Animation & Velocity.js",
             "jQuery"
             ]
-        }
+        },
+      "code":"https://github.com/noratop/nora"
     },
     {
       "title": "The Weather Sequencer",
@@ -83,7 +87,8 @@
             "Google's Reverse Geocoding API",
             "jQuery"
           ]
-        }
+        },
+      "code":"https://github.com/noratop/weather-sequencer-app"
     },
     {
       "title": "A Wild Edge",
@@ -97,7 +102,8 @@
           "list":[
             "Graphic design (logo & business cards)"
             ]
-        }
+        },
+      "code":""
     },
   ]
 }
