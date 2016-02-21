@@ -280,6 +280,13 @@ body {
         .portfolio_projectlist_project_descriptionlist_item {
           border: none;
           font-style: italic; }
+      .portfolio_projectlist_project_code {
+        margin-top: 1em;
+        display: block;
+        font-style: italic;
+        font-size: smaller;
+        color: #53523d;
+        text-decoration: underline; }
 
 .header--mobile {
   display: inherit;
