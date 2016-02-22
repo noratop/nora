@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="description" content="{% if page.description %}{{ page.description | strip_newlines | xml_escape }}{% else %}{{ site.description | strip_newlines | xml_escape}}{% endif %}">
-    <title>{% if page.title %}{{ page.title | xml_escape }}{% else %}{{ site.title | xml_escape }}{% endif %} | Nora Top | Full-Stack Web Developer</title>
+    <title>{% if page.title %}{{ page.title }}{% else %}Nora Top | Full-Stack Web Developer{% endif %}</title>
     <link rel="icon" type="image/png" sizes="any" href="/assets/img/noratop_favicon.png">
     <meta property="og:image" content="http://www.noratop.com/assets/img/noratop_favicon.png">
     <link rel="stylesheet" href="https://necolas.github.io/normalize.css/3.0.2/normalize.css" media="screen" title="no title" charset="utf-8">
