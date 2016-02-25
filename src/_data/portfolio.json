@@ -63,6 +63,7 @@
           "paragraph": [
             ],
           "list":[
+            "Build with Jekyll (Liquid templating)",
             "Graphic design",
             "From sketching to SVG animation: CSS Animation & Velocity.js",
             "jQuery"
