@@ -88,7 +88,7 @@
   }
 
   @include over-mobile {
-    display: inherit;
+    display: none;
     // p { font-size: 0.9em;}
 
     &_menu {
