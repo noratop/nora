@@ -17,8 +17,10 @@ $(function() {
         $Nb.velocity("stop",true).velocity({translateY : -230},{delay:300, duration:300});
         $Ta.velocity("stop",true).velocity({translateY : -230},{delay:500, duration:300});
         $Tb.velocity("stop",true).velocity({translateX : 225},{delay:0, duration:400}).velocity({translateX : 105},{delay:400, duration:300});
-        $logoBlock.velocity({ height: '30vh', paddingTop: '5vh', paddingBottom: 0 }, { delay: 500, duration: 1500 });
+        // $logoBlock.velocity({ height: '30vh', paddingTop: '5vh', paddingBottom: 0 }, { delay: 500, duration: 1500 });
     };
+
+    $( document ).ready(enter);
 
     function leave(){
         //$header_logo.velocity("stop",true).velocity({paddingLeft:0,paddingRight:0},{delay:0, duration:200});
