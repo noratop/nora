@@ -50,8 +50,8 @@
     }
 
     &_links {
-      position: fixed;
-      top: 0;
+      //position: fixed;
+      //top: 0;
       display: flex;
       flex-flow: row nowrap;
       justify-content: center;
@@ -82,9 +82,9 @@
       }
 
       &_icon {
-        display: flex;
+        display: inline-flex;
         align-items: center;
-        flex-direction: column;
+        //flex-direction: column;
 
         .fa {font-size: 1.2em;}
 
