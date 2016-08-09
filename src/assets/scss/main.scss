@@ -1,7 +1,7 @@
 //Colors
-$gold: #fff; //#cbaf00;
+$gold: #cbaf00;
 $gray: darken(#a5a384,30);
-$white: $gray; //#fff;
+$white: #fff;
 $black: #343434;
 $avatar:$gray;
 $logo:$gray;
@@ -18,6 +18,7 @@ html {
 @import 'keyframes';
 @import 'overlay';
 @import 'general';
+@import 'title';
 @import "header";
 @import 'avatar';
 @import 'profile';

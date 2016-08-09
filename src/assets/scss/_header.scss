@@ -1,121 +1,39 @@
-.header {
-  //display: none;
-  //position: fixed;
-  left:0;
-  //height: 40vh;
-  width:100vw;
-  background-color: $gold;
-  color: $white;
+.links {
 
-  &_logo {
-    display: none;
-    height: 100vh;
-    padding: 30vh 0;
+  width: 100%;
 
-    &_svg {
-      display: block;
-      width: 100%;
-      height: 100%;
-      fill: #fff; //$logo;
+  a {color: $gray;}
 
-      rect, polygon {box-shadow: 2px 2px 5px black;}
-    }
+  &_list {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-end;
+    list-style: none;
+    margin: 0;
+    padding: 0;
 
-    &:hover {
-      cursor: pointer;
-    }
-  }
+    &_item {
+      display: inline-block;
+      padding: 10px;
 
-  &_menu {
+      &:hover {
+        //background-color: $gray;
 
-    p {
-      margin:0;
-      // font-size: 0.9em;
-    }
-
-    &_title {
-      margin: 0;
-      color: $white;
-
-      &_wrapper {
-        text-align: center;
-      }
-      &_location {
-        font-size: smaller;
-      }
-      &--job {
-        // font-size: 1.4em;
-        font-weight:300;
-      }
-    }
-
-    &_links {
-      //position: fixed;
-      //top: 0;
-      display: flex;
-      flex-flow: row nowrap;
-      justify-content: center;
-      text-align: center;
-
-      a {color: $white;}
-
-      &_list {
-        list-style: none;
-        margin: 20px 0 0 0;
-        padding: 0;
-
-        &_item {
-          padding: 2px 20px;
-
-          &:hover {
-            background-color: $white;
-
-            a {
-              color: $gold;
-            }
-          }
-        }
-      }
-
-      &_info {
-        display: none;
-      }
-
-      &_icon {
-        display: inline-flex;
-        align-items: center;
-        //flex-direction: column;
-
-        .fa {font-size: 1.2em;}
-
-        &--first {
-          margin-top: 25px;
+        a {
+          color: $gold;
         }
       }
     }
   }
+  //@include over-mobile {
+  //
+  //}
+}
 
-  @include over-mobile {
-    //display: none;
-    // p { font-size: 0.9em;}
+.icon {
+  //display: inline-flex;
+  //align-items: center;
+  //flex-direction: column;
 
-    &_menu {
-      &_title {
-        &_wrapper {
-          margin-top:1.5em;
-        }
-      &--name {font-size: 2.15em;}
-      &--job { font-size: 1.55em;}
-      }
-
-      &_links {
-        &_info {
-          font-size: 1.2em;
-        }
-        &_icon {
-          .fa {font-size: 1.8em;}
-        }
-      }
-    }
-  }
+  .fa {font-size: 1.2em;}
 }

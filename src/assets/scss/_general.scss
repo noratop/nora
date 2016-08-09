@@ -3,7 +3,7 @@ body {
   margin: 0;
   font-family: Lato, sans-serif;
   font-weight: 300;
-  color: $gold;
+  color: $gray;
   font-size: 1.4em;
 
   h1 {
@@ -14,16 +14,17 @@ body {
     text-decoration: none;
     color: $gold;
   }
-
-  @include over-mobile {
-    //font-size: 1.5em;
-    // padding: 0 0 0 50vw;
-    font-weight: 100;
-    // font-size: 1.5em;
-  }
 }
 
-// on whoiam, whatido, portfolio
-.separator {
-  border-top: 5px $gold solid;
-}
+//  @include over-mobile {
+//    //font-size: 1.5em;
+//    // padding: 0 0 0 50vw;
+//    font-weight: 100;
+//    // font-size: 1.5em;
+//  }
+//}
+//
+//// on whoiam, whatido, portfolio
+//.separator {
+//  border-top: 5px $gold solid;
+//}

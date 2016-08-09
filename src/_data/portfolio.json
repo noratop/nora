@@ -4,6 +4,7 @@
       "title": "Salesfloor front-end app",
       "link": "http://noratop.github.io/salesfloor-challenge/",
       "screenshots":["salesfloor1.png"],
+      "screenshot":"salesfloor1.png",
       "description":
         {
           "paragraph": [
@@ -22,6 +23,7 @@
       "title": "DecodeMTL Wordpress Theme",
       "link": "",
       "screenshots":["decodemtl1.png","decodemtl2.png","decodemtl3.png","decodemtl4.png"],
+      "screenshot":"decodemtl1.png",
       "description":
         {
           "paragraph": [
@@ -40,6 +42,7 @@
       "title": "Busbud front-end app",
       "link": "http://busbud-front-end-challenge.herokuapp.com/",
       "screenshots":["busbud1.png","busbud2.png"],
+      "screenshot":"busbud2.png",
       "description":
         {
           "paragraph": [
@@ -58,6 +61,7 @@
       "title": "My personal website",
       "link": "http://noratop.com/",
       "screenshots":["avatar_design.png", "business_card_portfolio_flat.png"],
+      "screenshot":"business_card_portfolio_flat.png",
       "description":
         {
           "paragraph": [
@@ -75,6 +79,7 @@
       "title": "The Weather Sequencer",
       "link":"http://www.weathersequencer.xyz/",
       "screenshots":["weathersequencer01.png","weathersequencer02.png"],
+      "screenshot":"weathersequencer02.png",
       "description":
         {
           "paragraph": [
@@ -95,6 +100,7 @@
       "title": "A Wild Edge",
       "link": "http://awildedge.com/",
       "screenshots":["awildedge.png","awildedge_bc_1.png","awildedge_bc_2.png"],
+      "screenshot":"awildedge.png",
       "description":
         {
           "paragraph": [
