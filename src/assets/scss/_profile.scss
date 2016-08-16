@@ -1,12 +1,9 @@
 .profile {
   padding: 0 20px;
+  text-align: center;
 
   &_wrapper {
-    height: 100vh;
-    overflow: auto;
-    display: flex;
-    flex-flow: row nowrap;
-    align-items: center;
+
   }
 
   &_title {
