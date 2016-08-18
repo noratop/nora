@@ -1,16 +1,19 @@
 .links {
 
   list-style: none;
-  margin: 0;
+  margin-top: 2em;
   padding: 0;
-  float: left;
-  display: inline-block;
   position: absolute;
+  right: 2em;
 
   svg {
     fill: $gray;
-    width: 32px;
-    height: 32px;
+    width: 1.6em;
+    height: 1.6em;
+
+    &:hover {
+      fill: $gold;
+    }
   }
 
   a {
@@ -19,13 +22,9 @@
   }
 
   &_item {
-    //padding: 10px;
-
-    &:hover {
-      a {
-        color: $gold;
-      }
-    }
+    margin: 0.1em 0.2em;
+    text-align: right;
+    //display: inline-block;
   }
 
   //@include over-mobile {
