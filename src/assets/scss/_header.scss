@@ -1,23 +1,25 @@
 .links {
 
-  width: 100%;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  float: left;
+  display: inline-block;
+  position: absolute;
+
+  svg {
+    fill: $gray;
+    width: 32px;
+    height: 32px;
+  }
 
   a {
     color: $gray;
     font-weight: lighter;
   }
 
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: flex-end;
-  list-style: none;
-  margin: 0;
-  padding: 0;
-
   &_item {
-    //display: inline-block;
-    padding: 10px;
-    font-size: 1.5em;
+    //padding: 10px;
 
     &:hover {
       a {
@@ -29,12 +31,4 @@
   //@include over-mobile {
   //
   //}
-}
-
-.icon {
-  //display: inline-flex;
-  //align-items: center;
-  //flex-direction: column;
-
-  .fa {font-size: 1.2em;}
 }
