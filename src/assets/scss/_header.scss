@@ -7,12 +7,14 @@
   right: 2em;
 
   svg {
-    fill: $gray;
+    stroke: $gray;
+    stroke-miterlimit: 10;
+    fill: none;
     width: 1.6em;
     height: 1.6em;
 
     &:hover {
-      fill: $gold;
+      fill: $gray;
     }
   }
 
