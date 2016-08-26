@@ -1,17 +1,17 @@
 .links {
 
   list-style: none;
-  margin-top: 2em;
+  margin-top: 3rem;
   padding: 0;
   position: absolute;
-  right: 2em;
+  right: 2rem;
 
   svg {
     stroke: $gray;
     stroke-miterlimit: 10;
     fill: none;
-    width: 1.6em;
-    height: 1.6em;
+    width: 2.2rem;
+    height: 2.2rem;
 
     &:hover {
       fill: $gray;
@@ -24,7 +24,7 @@
   }
 
   &_item {
-    margin: 0.1em 0.2em;
+    margin: 0.1rem 0.2rem;
     text-align: right;
     display: inline-block;
   }
@@ -32,4 +32,18 @@
   //@include over-mobile {
   //
   //}
+}
+
+.title {
+  text-align: center;
+  margin-bottom: 2rem;
+
+  h1 {
+    margin: 0;
+    font-weight: 300;
+  }
+
+  &__job {
+    font-size: 1.7em;
+  }
 }
