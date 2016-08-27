@@ -1,8 +1,12 @@
 .avatar {
 
-  padding: 5rem 0 3rem;
+  padding: 3rem 0;
 
-  &_svg {
+  @include over-mobile {
+    padding: 5rem 0 3rem;
+  }
+
+    &_svg {
     max-height: 400px;
     fill: $avatar;
 

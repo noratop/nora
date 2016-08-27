@@ -1,28 +1,22 @@
 <section id="portfolio" class="portfolio">
     <ul class="portfolio_list">
         {% for project in site.data.portfolio.list %}
-        <li class="portfolio_list_item">
+        <li class="project">
             <a href="{{project.link}}" target="_blank">
-                <img src="/assets/img/{{project.screenshot}}" alt="{{project.title}} image-{{forloop.index}}"></li>
-            </a>
+                <div class="screenshot">
+                    <img src="/assets/img/{{project.screenshot}}" alt="{{project.title}}">
+                </div>
 
-            <!--<ul class="portfolio_projectlist_project_imageslist">-->
-              <!--{% for file in project.screenshots %}-->
-                <!--<li class="portfolio_projectlist_project_imageslist_item"><img src="/assets/img/{{file}}" alt="{{project.title}} image-{{forloop.index}}"></li>-->
-              <!--{% endfor %}-->
-            <!--</ul>-->
-            <!--{% for paraph in project.description.paragraph %}-->
-              <!--<p>{{paraph}}</p>-->
-            <!--{% endfor %}-->
-            <!--<ul class="portfolio_projectlist_project_descriptionlist">-->
-              <!--{% for item in project.description.list %}-->
-                <!--<li class="portfolio_projectlist_project_descriptionlist_item">{{item}}</li>-->
-              <!--{% endfor %}-->
-            <!--</ul>-->
-            <!--{% if project.code != '' %}-->
-            <!--<a class='portfolio_projectlist_project_code' href="{{project.code}}" target="_blank">source code</a>-->
-            <!--{% endif %}-->
-          <!--</li>-->
+                <div class="details">
+                    <p>{{project.description.paragraph[0]}}</p>
+                    <ul>
+                        {% for item in project.description.list %}
+                        <li>_ {{item}}</li>
+                        {% endfor %}
+                    </ul>
+                </div>
+            </a>
+        </li>
         {% endfor %}
     </ul>
 </section>

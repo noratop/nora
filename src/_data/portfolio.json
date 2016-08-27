@@ -40,7 +40,7 @@
     },
     {
       "title": "Busbud front-end app",
-      "link": "http://busbud-front-end-challenge.herokuapp.com/",
+      "link": "http://noratop.github.io/coding-challenge-frontend-b",
       "screenshots":["busbud1.png","busbud2.png"],
       "screenshot":"busbud2.png",
       "description":
@@ -56,24 +56,6 @@
             ]
         },
       "code":"https://github.com/noratop/coding-challenge-frontend-b"
-    },
-    {
-      "title": "My personal website",
-      "link": "http://noratop.com/",
-      "screenshots":["avatar_design.png", "business_card_portfolio_flat.png"],
-      "screenshot":"business_card_portfolio_flat.png",
-      "description":
-        {
-          "paragraph": [
-            ],
-          "list":[
-            "Build with Jekyll (Liquid templating)",
-            "Graphic design",
-            "From sketching to SVG animation: CSS Animation & Velocity.js",
-            "jQuery"
-            ]
-        },
-      "code":"https://github.com/noratop/nora"
     },
     {
       "title": "The Weather Sequencer",

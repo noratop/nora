@@ -1,91 +1,80 @@
 .portfolio {
-  margin-top: 80px;
+  max-width: 900px;
+  margin: 6em auto 0;
 
   &_list {
     margin: 0;
     padding: 0;
-    //list-style-type: square;
     list-style: none;
+  }
+}
+
+.project {
+  margin: 70px 0;
+  padding: 5px;
+  font-size: 0.8em;
+
+  a {
+    color: $gray;
     display: flex;
-    flex-flow: row wrap;
+    flex-flow: column;
 
-    &_item {
-      display: inline-block;
-      flex-basis: 33%;
-      margin: 0;
-      padding: 5px;
+    @include over-mobile {
+      flex-flow: row;
+    }
+  }
 
-      img {
-        width: 100%;
-        height: auto;
+  &:nth-child(odd):hover {
+    @include over-mobile {
+      border-right: $gold 2px solid;
+    }
+  }
+
+  &:nth-child(even) {
+    @include over-mobile {
+      &:hover {
+        border-left: $gold 2px solid;
       }
 
-      &_title {
-        display: inline-block;
-        margin:0 0 0.5em 0;
-        font-weight:300;
-        color: $gray;
-        font-size: 1em;
-
-        @include over-mobile {
-          font-size: 1.2em;
+      a {
+        .details {
+          order: -1;
         }
       }
+    }
+  }
 
-      &_link {
-        display: inline-block;
-        color: $gray;
-        margin: 0 0.5em;
-        font-size: 1em;
 
-        @include over-mobile {
-          font-size: 1.2em;
-        }
+  img {
+    width: 100%;
+    height: auto;
+    box-shadow: 1px 1px 5px #ccc;
+  }
 
-      }
+  .screenshot {
+    @include over-mobile {
+      max-width: 300px;
+    }
+  }
 
-      &_imageslist {
+  .details {
+    padding: 0 25px;
+    flex-grow: 1;
+    flex-basis: 70%;
+
+    p {
+      @include over-mobile {
         margin: 0;
-        padding: 0;
-        list-style: none;
-        display: flex;
-        flex-flow: row wrap;
-
-        &_item {
-          @include over-mobile {
-            flex-basis: 50%;
-          }
-
-          padding: 0 5px;
-          flex-basis: 100%;
-
-          img {
-            width:100%;
-            background-color: white;
-            cursor: pointer;
-          }
-        }
       }
+    }
 
-      &_descriptionlist {
-        list-style: none;
-        padding: 0;
-        font-size: 0.9em;
+    ul {
+      margin-top: 10px;
+      padding: 0;
+    }
 
-        &_item {
-          border : none;
-          font-style: italic;
-        }
-      }
-
-      &_code {
-        margin-top: 1em;
-        display: block;
-        font-style: italic;
-        font-size: smaller;
-        color:$gray;
-        text-decoration: underline;
-      }
+    li {
+      list-style: none;
     }
   }
 }
