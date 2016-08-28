@@ -12,8 +12,8 @@
           "list":[
             "React",
             "Redux",
-            "Geolocation",
-            "Google Places"
+            "Google Places",
+            "Google Reverse Geocoding"
             ]
         },
       "code":"https://github.com/noratop/salesfloor-challenge"
@@ -65,7 +65,8 @@
             "Web Audio API (Tone.js)",
             "Canvas (NexusUI)",
             "Forecast.io weather API",
-            "Google's Reverse Geocoding API",
+            "Google Places",
+            "Google Reverse Geocoding",
             "jQuery"
           ]
         },
