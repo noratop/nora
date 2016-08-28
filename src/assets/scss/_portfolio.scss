@@ -6,9 +6,11 @@
     margin: 0;
     padding: 0;
     list-style: none;
-    display: flex;
-    flex-flow: row wrap;
-    //justify-content: space-between;
+
+    @include over-mobile {
+      display: flex;
+      flex-flow: row wrap;
+    }
   }
 }
 
@@ -16,6 +18,9 @@
   flex-basis: 33%;
   font-size: 0.8em;
   position: relative;
+
+  padding: 10px 0;
+  @include over-mobile {padding: 0;}
 
   a {
     color: $gray;
@@ -34,17 +39,16 @@
   }
 
   .screenshot {
-    padding: 5px;
+    @include over-mobile {
+      padding: 5px;
+    }
   }
 
   .details {
-    display: none;
-    padding: 5px;
     width: 100%;
     height: 100%;
-    position: absolute;
-    top: 0;
     overflow: hidden;
+    font-size: smaller;
 
     ul {
       height: calc(100% - 3px);
@@ -56,6 +60,14 @@
 
     li {
       list-style: none;
+    }
+
+    @include over-mobile {
+      font-size: inherit;
+      padding: 5px;
+      display: none;
+      position: absolute;
+      top: 0;
     }
   }
 
