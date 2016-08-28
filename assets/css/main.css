@@ -4,6 +4,14 @@ html {
 *, *:before, *:after {
   box-sizing: inherit; }
 
+@font-face {
+  font-family: 'LemonMilk';
+  src: url("../font/LemonMilk.otf"); }
+
+@font-face {
+  font-family: 'TypoGraphica';
+  src: url("../font/TypoGraphica.otf"); }
+
 @keyframes retranslate {
   to {
     transform: translate(0, 0); } }
@@ -36,7 +44,7 @@ body {
   position: relative;
   margin: 0 auto;
   max-width: 1200px;
-  padding: 2em;
+  padding: 0.5em;
   font-family: Lato, sans-serif;
   font-weight: 300;
   color: #53523d;
@@ -46,6 +54,9 @@ body {
   body a {
     text-decoration: none;
     color: #cbaf00; }
+  @media only screen and (min-width: 670px) {
+    body {
+      padding: 2em; } }
 
 .gold {
   color: #cbaf00; }
@@ -56,22 +67,13 @@ body {
   .links svg {
     stroke: #53523d;
     fill: none;
-    stroke-miterlimit: 10;
-    width: 2.6rem;
-    height: 2.6rem; }
-    @media only screen and (min-width: 670px) {
-      .links svg {
-        width: 2.2rem;
-        height: 2.2rem; } }
+    stroke-width: 1.2;
+    width: 2.3rem;
+    height: 2.3rem;
+    fill: none;
+    stroke: #cbaf00; }
     .links svg:hover {
-      fill: #53523d; }
-    .links svg.gold {
-      stroke: #cbaf00; }
-      .links svg.gold:hover {
-        fill: #cbaf00; }
-    .links svg.bigger {
-      width: 2.6rem;
-      height: 2.6rem; }
+      fill: #cbaf00; }
   .links a {
     color: #53523d; }
   .links_item {
@@ -82,38 +84,64 @@ body {
         margin: 0.1rem 0.2rem; } }
 
 header .links {
+  display: none;
   margin: 10px auto;
-  text-align: center; }
+  text-align: right; }
   @media only screen and (min-width: 670px) {
     header .links {
+      display: block;
       position: absolute;
       right: 2rem;
       margin-top: 2rem; } }
 
 footer .links {
   border-top: #cbaf00 1px solid;
-  max-width: 200px;
   margin: 6rem auto 0;
   padding-top: 0.5rem;
   text-align: center; }
+  @media only screen and (min-width: 670px) {
+    footer .links {
+      max-width: 200px; } }
+  footer .links svg {
+    width: 2.6rem;
+    height: 2.6rem;
+    stroke: #cbaf00;
+    fill: #cbaf00; }
+    @media only screen and (min-width: 670px) {
+      footer .links svg {
+        fill: none;
+        stroke: #cbaf00; }
+        footer .links svg:hover {
+          fill: #cbaf00; } }
+  @media only screen and (min-width: 670px) {
+    footer .links .mobile {
+      display: none; } }
 
 .title {
   text-align: center;
-  margin-bottom: 2rem; }
+  margin-bottom: 4rem;
+  text-transform: uppercase;
+  font-family: LemonMilk, Lato, sans-serif;
+  font-size: smaller;
+  line-height: 1; }
   .title h1 {
-    margin: 0;
-    font-weight: 300; }
+    margin: 0; }
   .title__job {
-    font-size: 1.7em; }
+    font-family: TypoGraphica, Lato, sans-serif;
+    font-size: 1.8em; }
 
 .avatar {
-  padding: 3rem 0; }
+  padding: 1rem 0; }
   @media only screen and (min-width: 670px) {
     .avatar {
       padding: 5rem 0 3rem; } }
   .avatar_svg {
+    fill: #53523d;
     max-height: 400px;
-    fill: #53523d; }
+    margin: 1em 15vw; }
+    @media only screen and (min-width: 670px) {
+      .avatar_svg {
+        margin: 0; } }
     .avatar_svg_st1 {
       filter: url(#Adobe_OpacityMaskFilter); }
     .avatar_svg_st3 {
@@ -195,8 +223,13 @@ footer .links {
       animation-delay: 3.8s; }
 
 .profile {
-  padding: 0 20px;
-  text-align: center; }
+  padding: 0 30px 1rem;
+  text-align: center;
+  font-size: smaller; }
+  @media only screen and (min-width: 670px) {
+    .profile {
+      font-size: inherit;
+      padding: 0 20px 1rem; } }
 
 .portfolio {
   max-width: 900px;
@@ -244,42 +277,3 @@ footer .links {
       padding: 0; }
     .project .details li {
       list-style: none; }
-
-.header--mobile {
-  display: inherit;
-  width: 100vw;
-  height: 100vh; }
-
-.mobile {
-  z-index: 1;
-  position: fixed;
-  top: 100vh;
-  left: 100vw;
-  display: flex;
-  flex-flow: row nowrap;
-  justify-content: flex-end; }
-  @media only screen and (min-width: 670px) {
-    .mobile {
-      display: none; } }
-  .mobile--visible {
-    background-color: #cbaf00; }
-    .mobile--visible .fa {
-      transform: rotate(180deg); }
-  .mobile_button {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    align-self: flex-end;
-    position: relative;
-    left: -90px;
-    top: -90px;
-    width: 75px;
-    height: 75px;
-    padding-bottom: 8px;
-    opacity: 0.9;
-    color: #fff;
-    font-size: 2.3em;
-    background-color: #cbaf00;
-    border-radius: 50%;
-    border: 1px white solid;
-    transition: transform 0.5s; }
