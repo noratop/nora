@@ -1,14 +1,19 @@
 .avatar {
 
-  padding: 3rem 0;
+  padding: 1rem 0;
 
   @include over-mobile {
     padding: 5rem 0 3rem;
   }
 
-    &_svg {
-    max-height: 400px;
+  &_svg {
     fill: $avatar;
+    max-height: 400px;
+    margin: 1em 15vw;
+
+    @include over-mobile {
+      margin: 0;
+    }
 
     &_st1 {
       filter: url(#Adobe_OpacityMaskFilter);

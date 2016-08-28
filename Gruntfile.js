@@ -209,6 +209,6 @@ module.exports = function(grunt) {
 
     grunt.registerTask('dev', ['concurrent:dev']);
     //grunt.registerTask('build', ['clean:dist', 'copy:dist', 'imagemin:dist', 'webpack:dist', 'uglify:app', 'modernizr:dist', 'sass:dist', 'jekyll:dist']);
-    grunt.registerTask('build', ['clean:dist', 'copy:dist', 'imagemin:dist', 'webpack:dist', 'uglify:app', 'sass:dist', 'jekyll:dist']);
+    grunt.registerTask('build', ['clean:dist', 'copy:dist', 'webpack:dist', 'uglify:app', 'sass:dist', 'jekyll:dist']);
     grunt.registerTask('deploy', ['build', 'gh-pages']);
 };
