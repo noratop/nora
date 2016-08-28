@@ -2,18 +2,18 @@
     <ul class="portfolio_list">
         {% for project in site.data.portfolio.list %}
         <li class="project">
-            <a href="{{project.link}}" target="_blank">
-                <div class="screenshot">
-                    <img src="/assets/img/{{project.screenshot}}" alt="{{project.title}}">
-                </div>
-
-                <div class="details">
-                    <p>{{project.description.paragraph[0]}}</p>
-                    <ul>
-                        {% for item in project.description.list %}
-                        <li>_ {{item}}</li>
-                        {% endfor %}
-                    </ul>
+            <a {% if project.link %} href="{{project.link}}" {% endif %} target="_blank">
+                <div>
+                    <div class="screenshot">
+                        <img src="/assets/img/{{project.screenshot}}" alt="{{project.title}}">
+                    </div>
+                    <div class="details">
+                        <ul>
+                            {% for item in project.description.list %}
+                            <li>{{item}}</li>
+                            {% endfor %}
+                        </ul>
+                    </div>
                 </div>
             </a>
         </li>

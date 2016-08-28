@@ -3,7 +3,6 @@
     {
       "title": "Salesfloor front-end app",
       "link": "http://noratop.github.io/salesfloor-challenge/",
-      "screenshots":["salesfloor1.png"],
       "screenshot":"salesfloor1.png",
       "description":
         {
@@ -11,18 +10,16 @@
             "Small front-end web app built for the Salesfloor technical test. Finds restaurants around a given location."
             ],
           "list":[
-            "React / Redux",
+            "React",
+            "Redux",
             "Geolocation",
-            "GoogleMap / Google Places",
-            "Webpack / ES6",
+            "Google Places"
             ]
         },
       "code":"https://github.com/noratop/salesfloor-challenge"
     },
     {
       "title": "DecodeMTL Wordpress Theme",
-      "link": "",
-      "screenshots":["decodemtl1.png","decodemtl2.png","decodemtl3.png","decodemtl4.png"],
       "screenshot":"decodemtl1.png",
       "description":
         {
@@ -30,10 +27,9 @@
             "DecodeMTL's website migration from Jekyll to Wordpress, including Advanced Custom Fields Pro and WPML Multilanguage plugins."
             ],
           "list":[
-            "Custom Posts / custom fields",
-            "Post/Page templates",
-            "Custom admin screens",
-            "Multilanguage support"
+            "WordPress Theme",
+            "Advanced Custom Fields",
+            "WPML Multilanguage"
             ]
         },
       "code":""
@@ -41,7 +37,6 @@
     {
       "title": "Busbud front-end app",
       "link": "http://noratop.github.io/coding-challenge-frontend-b",
-      "screenshots":["busbud1.png","busbud2.png"],
       "screenshot":"busbud2.png",
       "description":
         {
@@ -49,10 +44,9 @@
             "Small front-end web app built for the Busbud coding challenge. Lists bus tickets with multilanguage and sorting results support."
             ],
           "list":[
-            "React / Redux",
-            "React router",
-            "Webpack / ES6",
-            "Express"
+            "React",
+            "Redux",
+            "React Router"
             ]
         },
       "code":"https://github.com/noratop/coding-challenge-frontend-b"
@@ -60,7 +54,6 @@
     {
       "title": "The Weather Sequencer",
       "link":"http://www.weathersequencer.xyz/",
-      "screenshots":["weathersequencer01.png","weathersequencer02.png"],
       "screenshot":"weathersequencer02.png",
       "description":
         {
@@ -69,8 +62,8 @@
             "This is my final project from DecodeMTL, a javascript-based coding bootcamp."
           ],
           "list":[
-            "Web Audio API using Tone.js",
-            "Canvas interface using NexusUI",
+            "Web Audio API (Tone.js)",
+            "Canvas (NexusUI)",
             "Forecast.io weather API",
             "Google's Reverse Geocoding API",
             "jQuery"
@@ -81,7 +74,6 @@
     {
       "title": "A Wild Edge",
       "link": "http://awildedge.com/",
-      "screenshots":["awildedge.png","awildedge_bc_1.png","awildedge_bc_2.png"],
       "screenshot":"awildedge.png",
       "description":
         {
@@ -89,7 +81,8 @@
             "A Wild Edge is a photography project by Celine Larbaletrier."
             ],
           "list":[
-            "Graphic design (logo & business cards)"
+            "Photography Project",
+            "Graphic design"
             ]
         },
       "code":""
