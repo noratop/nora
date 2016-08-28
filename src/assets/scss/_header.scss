@@ -5,19 +5,18 @@
   svg {
     stroke: $gray;
     fill: none;
-    stroke-width: 1.2;
+    stroke-width: 1;
     width: 2.3rem;
     height: 2.3rem;
-
-    //&:hover {
-    //  fill: $gray;
-    //}
     fill: none;
     stroke: $gold;
     &:hover {
       fill: $gold;
     }
 
+    @include over-mobile {
+      stroke-width: 1.2;
+    }
   }
 
   a {
