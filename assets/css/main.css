@@ -67,13 +67,16 @@ body {
   .links svg {
     stroke: #53523d;
     fill: none;
-    stroke-width: 1.2;
+    stroke-width: 1;
     width: 2.3rem;
     height: 2.3rem;
     fill: none;
     stroke: #cbaf00; }
     .links svg:hover {
       fill: #cbaf00; }
+    @media only screen and (min-width: 670px) {
+      .links svg {
+        stroke-width: 1.2; } }
   .links a {
     color: #53523d; }
   .links_item {
