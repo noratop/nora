@@ -30,10 +30,10 @@ module.exports = function(grunt) {
                 watch: true,
                 keepalive: true,
                 failOnError: false,
-                entry: __dirname + '/src/assets/js/app.js',
+                entry: __dirname + '/src/assets/js/main.js',
                 output: {
                     path: __dirname + '/src/assets/js',
-                    filename: 'app-bundle.js'
+                    filename: 'main-bundle.js'
                 },
                 resolve: {
                     extensions: ['', '.js', '.jsx'],
@@ -65,10 +65,10 @@ module.exports = function(grunt) {
                 devtool: '#source-map'
             },
             dist: {
-                entry: __dirname + '/src/assets/js/app.js',
+                entry: __dirname + '/src/assets/js/main.js',
                 output: {
                     path: __dirname + '/src/assets/js',
-                    filename: 'app-bundle.js'
+                    filename: 'main-bundle.js'
                 },
                 resolve: {
                     extensions: ['', '.js', '.jsx'],
@@ -165,7 +165,7 @@ module.exports = function(grunt) {
         uglify: {
             app: {
                 files: {
-                    'dist/assets/js/app-bundle.js': 'src/assets/js/app-bundle.js'
+                    'dist/assets/js/main-bundle.js': 'src/assets/js/main-bundle.js'
                 }
             }
         },
