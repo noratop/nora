@@ -241,11 +241,19 @@ footer .links {
     margin: 0;
     padding: 0;
     list-style: none; }
+    @media only screen and (min-width: 670px) {
+      .portfolio_list {
+        display: flex;
+        flex-flow: row wrap; } }
 
 .project {
-  margin: 70px 0;
-  padding: 5px;
-  font-size: 0.8em; }
+  flex-basis: 33%;
+  font-size: 0.8em;
+  position: relative;
+  padding: 10px 0; }
+  @media only screen and (min-width: 670px) {
+    .project {
+      padding: 0; } }
   .project a {
     color: #53523d;
     display: flex;
@@ -253,30 +261,32 @@ footer .links {
     @media only screen and (min-width: 670px) {
       .project a {
         flex-flow: row; } }
-  @media only screen and (min-width: 670px) {
-    .project:nth-child(odd):hover {
-      border-right: #cbaf00 2px solid; } }
-  @media only screen and (min-width: 670px) {
-    .project:nth-child(even):hover {
-      border-left: #cbaf00 2px solid; }
-    .project:nth-child(even) a .details {
-      order: -1; } }
   .project img {
     width: 100%;
     height: auto;
     box-shadow: 1px 1px 5px #ccc; }
   @media only screen and (min-width: 670px) {
     .project .screenshot {
-      max-width: 300px; } }
+      padding: 5px; } }
   .project .details {
-    padding: 0 25px;
-    flex-grow: 1;
-    flex-basis: 70%; }
-    @media only screen and (min-width: 670px) {
-      .project .details p {
-        margin: 0; } }
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    font-size: smaller; }
     .project .details ul {
-      margin-top: 10px;
-      padding: 0; }
+      height: calc(100% - 3px);
+      padding: 10px;
+      color: #eee;
+      background-color: rgba(0, 0, 0, 0.6);
+      font-family: LemonMilk, Lato, sans-serif; }
     .project .details li {
       list-style: none; }
+    @media only screen and (min-width: 670px) {
+      .project .details {
+        font-size: inherit;
+        padding: 5px;
+        display: none;
+        position: absolute;
+        top: 0; } }
+  .project:hover .details {
+    display: inline-block; }
