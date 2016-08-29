@@ -8,7 +8,6 @@ module.exports = function(grunt) {
                     logConcurrentOutput: true
                 },
                 tasks: ['watch:sass', 'webpack:dev', 'jekyll:dev']
-                // tasks: ['watch:sass', 'webpack:dev']
             }
         },
         jekyll: {
@@ -30,30 +29,30 @@ module.exports = function(grunt) {
                 watch: true,
                 keepalive: true,
                 failOnError: false,
-                entry: __dirname + '/src/assets/js/main.js',
-                output: {
-                    path: __dirname + '/src/assets/js',
-                    filename: 'main-bundle.js'
-                },
-                resolve: {
-                    extensions: ['', '.js', '.jsx'],
-                    modulesDirectories: [
-                        'web_modules',
-                        'node_modules',
-                        //'bower_components',
-                        __dirname + '/src/assets/js',
-                        //__dirname + '/parse/cloud'
-                    ],
+                // entry: __dirname + '/src/assets/js/main.js',
+                // output: {
+                //     path: __dirname + '/src/assets/js',
+                //     filename: 'main-bundle.js'
+                // },
+                // resolve: {
+                //     extensions: ['', '.js', '.jsx'],
+                //     modulesDirectories: [
+                //         'web_modules',
+                //         'node_modules',
+                //         //'bower_components',
+                //         __dirname + '/src/assets/js',
+                //         //__dirname + '/parse/cloud'
+                //     ],
                     // alias: {
                     //     foundation: 'foundation/js/foundation'
                     // }
-                },
-                plugins: [
-                    new webpack.ProvidePlugin({
-                        $: 'jquery',
-                        jQuery: 'jquery'
-                    })
-                ],
+                // },
+                // plugins: [
+                //     new webpack.ProvidePlugin({
+                //         $: 'jquery',
+                //         jQuery: 'jquery'
+                //     })
+                // ],
                 //module: {
                 //    loaders: [
                 //        {
@@ -65,30 +64,30 @@ module.exports = function(grunt) {
                 devtool: '#source-map'
             },
             dist: {
-                entry: __dirname + '/src/assets/js/main.js',
-                output: {
-                    path: __dirname + '/src/assets/js',
-                    filename: 'main-bundle.js'
-                },
-                resolve: {
-                    extensions: ['', '.js', '.jsx'],
-                    modulesDirectories: [
-                        'web_modules',
-                        'node_modules',
-                        //'bower_components',
-                        __dirname + '/src/assets/js',
-                        //__dirname + '/parse/cloud'
-                    ],
-                    // alias: {
-                    //     foundation: 'foundation/js/foundation'
-                    // }
-                },
-                plugins: [
-                    new webpack.ProvidePlugin({
-                        $: 'jquery',
-                        jQuery: 'jquery'
-                    })
-                ],
+                // entry: __dirname + '/src/assets/js/main.js',
+                // output: {
+                //     path: __dirname + '/src/assets/js',
+                //     filename: 'main-bundle.js'
+                // },
+                // resolve: {
+                //     extensions: ['', '.js', '.jsx'],
+                //     modulesDirectories: [
+                //         'web_modules',
+                //         'node_modules',
+                //         //'bower_components',
+                //         __dirname + '/src/assets/js',
+                //         //__dirname + '/parse/cloud'
+                //     ],
+                //     // alias: {
+                //     //     foundation: 'foundation/js/foundation'
+                //     // }
+                // },
+                // plugins: [
+                //     new webpack.ProvidePlugin({
+                //         $: 'jquery',
+                //         jQuery: 'jquery'
+                //     })
+                // ],
                 //module: {
                 //    loaders: [
                 //        {
@@ -162,13 +161,13 @@ module.exports = function(grunt) {
                 dest: 'dist/'
             }
         },
-        uglify: {
-            app: {
-                files: {
-                    'dist/assets/js/main-bundle.js': 'src/assets/js/main-bundle.js'
-                }
-            }
-        },
+        // uglify: {
+        //     app: {
+        //         files: {
+        //             'dist/assets/js/main-bundle.js': 'src/assets/js/main-bundle.js'
+        //         }
+        //     }
+        // },
         'gh-pages': {
            options: {
                base: 'dist-jekyll'
@@ -177,25 +176,25 @@ module.exports = function(grunt) {
         },
         clean: {
             dist: ['dist']
-        },
-        imagemin: {
-            dist: {
-                options: {
-                    optimizationLevel: 7
-                },
-                files: [
-                    {
-                        expand: true,
-                        cwd: 'src/',
-                        src: ['**/*.png'],
-                        dest: 'dist'
-                    }
-                ]
-            }
         }
+        // imagemin: {
+        //     dist: {
+        //         options: {
+        //             optimizationLevel: 7
+        //         },
+        //         files: [
+        //             {
+        //                 expand: true,
+        //                 cwd: 'src/',
+        //                 src: ['**/*.png'],
+        //                 dest: 'dist'
+        //             }
+        //         ]
+        //     }
+        // }
     });
 
-    grunt.loadNpmTasks('grunt-contrib-uglify');
+    // grunt.loadNpmTasks('grunt-contrib-uglify');
     grunt.loadNpmTasks('grunt-contrib-clean');
     grunt.loadNpmTasks('grunt-contrib-copy');
     grunt.loadNpmTasks('grunt-concurrent');
@@ -205,10 +204,10 @@ module.exports = function(grunt) {
     //grunt.loadNpmTasks('grunt-modernizr');
     grunt.loadNpmTasks('grunt-gh-pages');
     grunt.loadNpmTasks('grunt-jekyll');
-    grunt.loadNpmTasks('grunt-contrib-imagemin');
+    // grunt.loadNpmTasks('grunt-contrib-imagemin');
 
     grunt.registerTask('dev', ['concurrent:dev']);
     //grunt.registerTask('build', ['clean:dist', 'copy:dist', 'imagemin:dist', 'webpack:dist', 'uglify:app', 'modernizr:dist', 'sass:dist', 'jekyll:dist']);
-    grunt.registerTask('build', ['clean:dist', 'copy:dist', 'webpack:dist', 'uglify:app', 'sass:dist', 'jekyll:dist']);
+    grunt.registerTask('build', ['clean:dist', 'copy:dist', 'sass:dist', 'jekyll:dist']);
     grunt.registerTask('deploy', ['build', 'gh-pages']);
 };
