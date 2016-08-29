@@ -2,15 +2,19 @@ $tablet-width: 670px;
 $desktop-width: 1024px;
 
 @mixin over-mobile {
-  // @media (min-width: #{$tablet-width}) and (max-width: #{$desktop-width - 1px}) {
-  @media only screen and (min-width: #{$tablet-width}){
+  @media only screen and (min-width: #{$tablet-width}) {
+    @content;
+  }
+}
+
+@mixin over-tablet {
+  @media only screen and (min-width: #{$desktop-width}) {
     @content;
   }
 }
 
 @mixin sketch($y, $delay) {
   opacity: 0;
-  // animation:
   transform: translateY($y);
   animation: fadein 0.15s ease-in forwards, retranslate 0.15s linear forwards;
 
