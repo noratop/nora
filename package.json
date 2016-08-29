@@ -3,9 +3,9 @@
   "version": "0.1.0",
   "author": "Nora Top <top.nora@gmail.com>",
   "private": true,
-  "dependencies": {
-  },
+  "dependencies": {},
   "devDependencies": {
+    "autoprefixer": "^6.4.0",
     "grunt": "^0.4.5",
     "grunt-concurrent": "^2.1.0",
     "grunt-contrib-clean": "^0.7.0",
@@ -14,9 +14,9 @@
     "grunt-contrib-watch": "^0.6.1",
     "grunt-gh-pages": "^1.0.0",
     "grunt-jekyll": "^0.4.3",
+    "grunt-postcss": "^0.8.0",
     "grunt-sass": "^1.1.0",
     "grunt-webpack": "^1.0.11",
-    "grunt-postcss": "^0.8.0",
     "webpack": "^1.12.12",
     "webpack-dev-server": "^1.14.1"
   }
