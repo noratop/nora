@@ -176,7 +176,7 @@ module.exports = function(grunt) {
         },
         clean: {
             dist: ['dist']
-        }
+        },
         // imagemin: {
         //     dist: {
         //         options: {
@@ -192,6 +192,19 @@ module.exports = function(grunt) {
         //         ]
         //     }
         // }
+        postcss: {
+            options: {
+                map: true,
+                processors: [
+                    require('autoprefixer')({
+                        browsers: ['last 2 versions']
+                    })
+                ]
+            },
+            dist: {
+                src: 'css/*.css'
+            }
+        }
     });
 
     // grunt.loadNpmTasks('grunt-contrib-uglify');
@@ -205,9 +218,11 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-gh-pages');
     grunt.loadNpmTasks('grunt-jekyll');
     // grunt.loadNpmTasks('grunt-contrib-imagemin');
+    grunt.loadNpmTasks('grunt-postcss');
+
 
     grunt.registerTask('dev', ['concurrent:dev']);
     //grunt.registerTask('build', ['clean:dist', 'copy:dist', 'imagemin:dist', 'webpack:dist', 'uglify:app', 'modernizr:dist', 'sass:dist', 'jekyll:dist']);
-    grunt.registerTask('build', ['clean:dist', 'copy:dist', 'sass:dist', 'jekyll:dist']);
+    grunt.registerTask('build', ['clean:dist', 'copy:dist', 'sass:dist', 'postcss:dist', 'jekyll:dist']);
     grunt.registerTask('deploy', ['build', 'gh-pages']);
 };
