@@ -13,3 +13,168 @@
     opacity: 1;
   }
 }
+@keyframes blink-left {
+  0% {
+    stroke-width: 1;
+    transform: scaleY(1);
+  }
+  10% {
+    stroke-width: 1;
+    transform: scaleY(1);
+  }
+  10.1% {
+    stroke-width: 4;
+    transform: scaleY(0.2);
+  }
+  10.9% {
+    stroke-width: 4;
+    transform: scaleY(0.2);
+  }
+  11% {
+    stroke-width: 1;
+    transform: scaleY(1);
+  }
+  40% {
+    stroke-width: 1;
+    transform: scaleY(1);
+  }
+  40.1% {
+    stroke-width: 4;
+    transform: scaleY(0.2);
+  }
+  40.8% {
+    stroke-width: 4;
+    transform: scaleY(0.2);
+  }
+  41% {
+    stroke-width: 1;
+    transform: scaleY(1);
+  }
+  42% {
+    stroke-width: 1;
+    transform: scaleY(1);
+  }
+  42.1% {
+    stroke-width: 4;
+    transform: scaleY(0.2);
+  }
+  42.7% {
+    stroke-width: 4;
+    transform: scaleY(0.2);
+  }
+  42.8% {
+    stroke-width: 1;
+    transform: scaleY(1);
+  }
+  70% {
+    stroke-width: 1;
+    transform: scaleY(1);
+  }
+  70.05% {
+    stroke-width: 10;
+    transform: skew(320deg, 348deg) scale(0.6, 0.2) translate(-60%, -490%);
+  }
+  88% {
+    stroke-width: 10;
+    transform: skew(320deg, 348deg) scale(0.6, 0.2) translate(-60%, -490%);
+  }
+  88.1% {
+    stroke-width: 4;
+    transform: scaleY(0.2);
+  }
+  88.8% {
+    stroke-width: 4;
+    transform: scaleY(0.2);
+  }
+  89% {
+    stroke-width: 1;
+    transform: scaleY(1);
+  }
+  100% {
+    stroke-width: 1;
+    transform: scaleY(1);
+  }
+}
+
+@keyframes blink-right {
+  0% {
+    stroke-width: 1;
+    transform: scaleY(1);
+  }
+  10% {
+    stroke-width: 1;
+    transform: scaleY(1);
+  }
+  10.1% {
+    stroke-width: 4;
+    transform: scaleY(0.2);
+  }
+  10.9% {
+    stroke-width: 4;
+    transform: scaleY(0.2);
+  }
+  11% {
+    stroke-width: 1;
+    transform: scaleY(1);
+  }
+  40% {
+    stroke-width: 1;
+    transform: scaleY(1);
+  }
+  40.1% {
+    stroke-width: 4;
+    transform: scaleY(0.2);
+  }
+  40.8% {
+    stroke-width: 4;
+    transform: scaleY(0.2);
+  }
+  41% {
+    stroke-width: 1;
+    transform: scaleY(1);
+  }
+  42% {
+    stroke-width: 1;
+    transform: scaleY(1);
+  }
+  42.1% {
+    stroke-width: 4;
+    transform: scaleY(0.2);
+  }
+  42.7% {
+    stroke-width: 4;
+    transform: scaleY(0.2);
+  }
+  42.8% {
+    stroke-width: 1;
+    transform: scaleY(1);
+  }
+  70% {
+    stroke-width: 1;
+    transform: scaleY(1);
+  }
+  70.05% {
+    stroke-width: 10;
+    transform: skew(130deg, 15deg) scale(0.48, 0.13) translate(-30%, -600%);
+  }
+  88% {
+    stroke-width: 10;
+    transform: skew(130deg, 15deg) scale(0.48, 0.13) translate(-30%, -600%);
+  }
+  88.1% {
+    stroke-width: 4;
+    transform: scaleY(0.2);
+  }
+  88.8% {
+    stroke-width: 4;
+    transform: scaleY(0.2);
+  }
+  89% {
+    stroke-width: 1;
+    transform: scaleY(1);
+  }
+  100% {
+    stroke-width: 1;
+    transform: scaleY(1);
+  }
+}
