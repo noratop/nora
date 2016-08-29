@@ -202,7 +202,7 @@ module.exports = function(grunt) {
                 ]
             },
             dist: {
-                src: 'css/*.css'
+                src: 'dist/assets/css/*.css'
             }
         }
     });
