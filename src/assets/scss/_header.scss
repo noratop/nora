@@ -39,7 +39,8 @@ header .links {
   text-align: right;
 
   @include over-mobile {
-    display: block;
+    display: none;
+    //display: block;
     position: absolute;
     right: 2rem;
     margin-top: 2rem;
@@ -72,9 +73,13 @@ footer .links {
   }
 
   .mobile {
-    @include over-mobile {
-      display: none;
-    }
+    //@include over-mobile {
+    //  display: none;
+    //}
+  }
+
+  .hidden {
+    display: none ;
   }
 }
 
