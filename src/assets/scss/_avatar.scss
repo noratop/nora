@@ -56,11 +56,13 @@
   }
 
   &_eye_left {
+    transform-box: fill-box;
     transform-origin: 50% 80%;
     animation: dash 1.8s linear forwards, blink-left 15s linear 5s infinite;
   }
 
   &_eye_right {
+    transform-box: fill-box;
     transform-origin: 50% 80%;
     animation: dash 1.8s linear forwards, blink-right 15s linear 5s infinite;
   }
